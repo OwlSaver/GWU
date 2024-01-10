@@ -112,18 +112,6 @@ s3 = "789"
 result = concat_strings(s1, s2)
 result = concat_strings(result, s3)
 print(f"The resultant joined string: {result}")
-
-test_list = [s1, s2, s3]
- 
-# printing original list
-print(f"The original list is : {test_list}")
- 
-result = test_list[0]
-for i in range(1, len(test_list)):
-    result = concat_strings(result, test_list[i])
-# printing result
-print(f"The resultant joined string: {result}")
-
 """
 6. Create a Python function to handle the following list, which contains only integers:
     M = [3, 12, 25, 8, 16, 42, 9, 32, 11]
