@@ -97,13 +97,6 @@ s3 = ”789”
 print("##################################################################################")
 print("# Problem 5")
 print("##################################################################################")
- 
-# initializing list
-test_list = ["12345", "34567", "789"]
- 
-# printing original list
-print(f"The original list is : {test_list}")
- 
 # concatenate two strings with overlapping suffix / prefix
 def concat_strings(str1, str2):
     if len(str1) == 0 or len(str2) == 0:
@@ -112,7 +105,19 @@ def concat_strings(str1, str2):
         if str1.endswith(str2[:i]):
             return str1 + str2[i:]
     return str1 + str2
+# initializing list
+s1 = "12345"
+s2 = "34567"
+s3 = "789"
+result = concat_strings(s1, s2)
+result = concat_strings(result, s3)
+print(f"The resultant joined string: {result}")
 
+test_list = [s1, s2, s3]
+ 
+# printing original list
+print(f"The original list is : {test_list}")
+ 
 result = test_list[0]
 for i in range(1, len(test_list)):
     result = concat_strings(result, test_list[i])
