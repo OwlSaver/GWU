@@ -48,8 +48,8 @@ cfvalues = [0] * (days + 1)
 cfvalues[0] = shares * -1 * purchaseprice
 cfvalues[650] = shares * saleprice
 ir = 0.0000015
-print(f"Bought {shares} on day 0 for ${purchaseprice} for a total of ${shares * purchaseprice}.")
-print(f"Sold {shares} on day 650 for ${saleprice} for a total of ${shares * saleprice}.")
+print(f"Bought {shares} shares on day 0 for ${purchaseprice} for a total of ${shares * purchaseprice}.")
+print(f"Sold {shares} shares on day 650 for ${saleprice} for a total of ${shares * saleprice}.")
 print(f"Total profit is ${(shares * saleprice) - (shares * purchaseprice)}.")
 print(f"Using a rate of %{ir * 100} the NPV is {NPVCalc(ir,cfvalues)}.")
 """
@@ -295,3 +295,74 @@ integers, strings, and potentially other Python objects. The function should:
 print("##################################################################################")
 print("# Problem 10")
 print("##################################################################################")
+def FindFirstStringNumeric(aList):
+    result = 0
+    for idx, anElement in enumerate(aList):
+        if type(anElement) is str:
+            if anElement.isdecimal():
+                result = idx
+                break
+    return result
+def FindOnlyStrings(aList):
+    result = []
+    for anElement in aList:
+        if type(anElement) is str:
+            result.append(anElement)
+    return result
+def SumNumerics(aList):
+    result = 0
+    for anElement in aList:
+        if type(anElement) is int or type(anElement) is float:
+            result = result + anElement
+    return result
+def pullinfo(aList):
+    if type(aList) is list:
+        print(f"The list to be processed is {aList}")
+        firstStringNumericIndex = FindFirstStringNumeric(aList)
+        if firstStringNumericIndex == 0:
+            raise Exception("The list does not have string that is a numeric.")
+        else:
+            firstStringNumeric = int(aList[firstStringNumericIndex])
+            if firstStringNumeric % 2 == 0:
+                print(f"The first string numeric is at position {firstStringNumericIndex} and has the value {firstStringNumeric} which is an even number.")
+                newList = aList[firstStringNumericIndex+1::]
+                result = FindOnlyStrings(newList)
+            else:
+                print(f"The first string numeric is at position {firstStringNumericIndex} and has the value {firstStringNumeric} which is an odd number.")
+                newList = aList[0:firstStringNumericIndex:]
+                result = SumNumerics(newList)
+    else:
+        raise TypeError("The value provided is not a list.")
+    return result
+M = 17
+print(f"M is currently {M}.")
+try:
+    R = pullinfo(M)
+except:
+    print("An error occured.")
+else:
+    print(f"The result of pullinfo on {M} is {R}")
+M = [5, "10", "Python", 3.14, "7"]
+print(f"M is currently {M}.")
+try:
+    R = pullinfo(M)
+except:
+    print("An error occured.")
+else:
+    print(f"The result of pullinfo on {M} is {R}")
+M = [5, "11", "Python", 3.14, "7"]
+print(f"M is currently {M}.")
+try:
+    R = pullinfo(M)
+except:
+    print("An error occured.")
+else:
+    print(f"The result of pullinfo on {M} is {R}")
+M = [5, 3, "11", "Python", 3.14, "7"]
+print(f"M is currently {M}.")
+try:
+    R = pullinfo(M)
+except:
+    print("An error occured.")
+else:
+    print(f"The result of pullinfo on {M} is {R}")
