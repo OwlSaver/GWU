@@ -226,7 +226,7 @@ print(f"L is currently {L}.")
 try:
     medianFind(L)
 except:
-    print("An error occured.")
+    print("An error occurred.")
 else:
     print(f"Verifying that L has not changed {L}")
 L = [1]
@@ -234,7 +234,7 @@ print(f"L is currently {L}.")
 try:
     medianFind(L)
 except:
-    print("An error occured.")
+    print("An error occurred.")
 else:
     print(f"Verifying that L has not changed {L}")
 L = [1,2,3,4]
@@ -242,7 +242,7 @@ print(f"L is currently {L}.")
 try:
     medianFind(L)
 except:
-    print("An error occured.")
+    print("An error occurred.")
 else:
     print(f"Verifying that L has not changed {L}")
 L = [1,2,3,4,5]
@@ -250,7 +250,7 @@ print(f"L is currently {L}.")
 try:
     medianFind(L)
 except:
-    print("An error occured.")
+    print("An error occurred.")
 else:
     print(f"Verifying that L has not changed {L}")
 """
@@ -332,7 +332,7 @@ print(f"M is currently {M}.")
 try:
     R = pullinfo(M)
 except:
-    print("An error occured.")
+    print("An error occurred.")
 else:
     print(f"The result of pullinfo on {M} is {R}")
 M = [5, "10", "Python", 3.14, "7"]
@@ -340,7 +340,7 @@ print(f"M is currently {M}.")
 try:
     R = pullinfo(M)
 except:
-    print("An error occured.")
+    print("An error occurred.")
 else:
     print(f"The result of pullinfo on {M} is {R}")
 M = [5, "11", "Python", 3.14, "7"]
@@ -348,7 +348,7 @@ print(f"M is currently {M}.")
 try:
     R = pullinfo(M)
 except:
-    print("An error occured.")
+    print("An error occurred.")
 else:
     print(f"The result of pullinfo on {M} is {R}")
 M = [5, 3, "11", "Python", 3.14, "7"]
@@ -356,6 +356,6 @@ print(f"M is currently {M}.")
 try:
     R = pullinfo(M)
 except:
-    print("An error occured.")
+    print("An error occurred.")
 else:
     print(f"The result of pullinfo on {M} is {R}")
