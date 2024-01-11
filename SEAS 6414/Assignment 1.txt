@@ -42,7 +42,7 @@ N as a string is data
 # Problem 8
 ##################################################################################
 L is currently 17.
-An error occured.
+An error occurred.
 L is currently [1].
 The list to be processed is [1]
 Median index is 0
@@ -50,7 +50,7 @@ Lower values are []
 Verifying that L has not changed [1]
 L is currently [1, 2, 3, 4].
 The list to be processed is [1, 2, 3, 4]
-An error occured.
+An error occurred.
 L is currently [1, 2, 3, 4, 5].
 The list to be processed is [1, 2, 3, 4, 5]
 Median index is 2
@@ -64,7 +64,7 @@ My name is Michael Wacey, it has 13 characters which is an Odd number.
 # Problem 10
 ##################################################################################
 M is currently 17.
-An error occured.
+An error occurred.
 M is currently [5, '10', 'Python', 3.14, '7'].
 The list to be processed is [5, '10', 'Python', 3.14, '7']
 The first string numeric is at position 1 and has the value 10 which is an even number.
