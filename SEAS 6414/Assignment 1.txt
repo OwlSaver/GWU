@@ -1,0 +1,79 @@
+##################################################################################
+# Problem 1
+##################################################################################
+There are 1024 bytes in a kilobyte.
+There are 1048576 bytes in a megabyte.
+There are 1073741824 bytes in a gigabyte.
+##################################################################################
+# Problem 2
+##################################################################################
+Bought 450 shares on day 0 for $550 for a total of $247500.
+Sold 450 shares on day 650 for $950 for a total of $427500.
+Total profit is $180000.
+Using a rate of %0.00015000000000000001 the NPV is 179583.39094237896.
+##################################################################################
+# Problem 3
+##################################################################################
+Even Square / Odd Square Root of 22 is 484
+Even Square / Odd Square Root of 23 is 4.795831523312719
+##################################################################################
+# Problem 4
+##################################################################################
+The variable s is sooter
+The variable s is now soccer.
+##################################################################################
+# Problem 5
+##################################################################################
+The resultant joined string: 123456789
+##################################################################################
+# Problem 6
+##################################################################################
+Case 1: List [3, 12, 25, 8, 16, 42, 9, 32, 11] Sum First Last 14.
+Case 2: List [9, 12, 25, 8, 16, 42, 9, 32, 77] Sum First Last 86.
+Case 3: List [3] Sum First Last 3.
+Case 4: List ['A', 12, 25, 8, 16, 42, 9, 32, 11] Sum First Last 0.
+##################################################################################
+# Problem 7
+##################################################################################
+M is [4, 'd', 8, 't', 15, 'a', 16, 23, 'a']
+N is ['d', 'a', 't', 'a']
+N as a string is data
+##################################################################################
+# Problem 8
+##################################################################################
+L is currently 17.
+An error occured.
+L is currently [1].
+The list to be processed is [1]
+Median index is 0
+Lower values are []
+Verifying that L has not changed [1]
+L is currently [1, 2, 3, 4].
+The list to be processed is [1, 2, 3, 4]
+An error occured.
+L is currently [1, 2, 3, 4, 5].
+The list to be processed is [1, 2, 3, 4, 5]
+Median index is 2
+Lower values are [1, 2]
+Verifying that L has not changed [1, 2, 3, 4, 5]
+##################################################################################
+# Problem 9
+##################################################################################
+My name is Michael Wacey, it has 13 characters which is an Odd number.
+##################################################################################
+# Problem 10
+##################################################################################
+M is currently 17.
+An error occured.
+M is currently [5, '10', 'Python', 3.14, '7'].
+The list to be processed is [5, '10', 'Python', 3.14, '7']
+The first string numeric is at position 1 and has the value 10 which is an even number.
+The result of pullinfo on [5, '10', 'Python', 3.14, '7'] is ['Python', '7']
+M is currently [5, '11', 'Python', 3.14, '7'].
+The list to be processed is [5, '11', 'Python', 3.14, '7']
+The first string numeric is at position 1 and has the value 11 which is an odd number.
+The result of pullinfo on [5, '11', 'Python', 3.14, '7'] is 5
+M is currently [5, 3, '11', 'Python', 3.14, '7'].
+The list to be processed is [5, 3, '11', 'Python', 3.14, '7']
+The first string numeric is at position 2 and has the value 11 which is an odd number.
+The result of pullinfo on [5, 3, '11', 'Python', 3.14, '7'] is 8
