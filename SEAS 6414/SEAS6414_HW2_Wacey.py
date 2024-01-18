@@ -32,7 +32,7 @@ Note: The focus of this question is on using list comprehensions effectively.
 """
 P1Code = """
 import math
-aList = range(20)
+aList = range(1,21)
 squareList = [x * x for x in aList]
 print(squareList)
 oddSquares = [x for x in squareList if math.sqrt(x) % 2 == 1]

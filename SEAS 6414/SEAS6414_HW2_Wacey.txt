@@ -17,7 +17,7 @@ Note: The focus of this question is on using list comprehensions effectively.
 Code:
 
 import math
-aList = range(20)
+aList = range(1,21)
 squareList = [x * x for x in aList]
 print(squareList)
 oddSquares = [x for x in squareList if math.sqrt(x) % 2 == 1]
@@ -25,7 +25,7 @@ print(oddSquares)
 
 Execution:
 
-[0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225, 256, 289, 324, 361]
+[1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225, 256, 289, 324, 361, 400]
 [1, 9, 25, 49, 81, 121, 169, 225, 289, 361]
 
 #######################################################################################
