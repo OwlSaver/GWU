@@ -254,3 +254,64 @@ S = "Eager elephants eagerly enjoy eating enormous, exquisite, exotic apples eve
 print(f"The sentece '{S}' has {countVowels(S)} words that begin with a vowel.")
 """
 DoProblem(P7Text, P7Code)
+
+P8Text = """
+#######################################################################################
+# Problem 8
+#######################################################################################
+
+Problem:
+Use list comprehension to generate an n × n identity matrix.
+Task:
+• Write a one-line Python code using list comprehension to create an n×n identity
+matrix.
+• The identity matrix should be represented as a list of lists, where each inner list
+corresponds to a row in the matrix.
+• The diagonal elements of the matrix should be 1, and all other elements should be 0.
+"""
+P8Code = """
+print([[1 if i == j else 0 for i in range(8)] for j in range(8)])
+"""
+DoProblem(P8Text, P8Code)
+
+
+P9Text = """
+#######################################################################################
+# Problem 9
+#######################################################################################
+
+Problem:
+
+Implement functions to generate the Look-and-Say sequence, which follows a pattern
+of reading off the numbers of digits in groups of the same digit:
+
+1, 11, 21, 1211, 111221, 312211, 13112221, . . .
+Functions to Implement:
+• Parse String(term): Accepts a term from the sequence as a string and returns
+a list of lists. Each sub-list contains two elements: the digit and the count of
+its consecutive appearances. For example, ‘Parse String(’1211’)‘ should return
+[[1, 1], [1, 2], [2, 1]], representing ”one 1, one 2, and two 1s”.
+• Next Term(term): Accepts a term of the sequence as a string and returns the
+next term. This function should utilize ‘Parse String‘ internally. For example,
+‘Next Term(’1211’)‘ should output ’111221’.
+• Read It(init, n): Given an initial term ‘init‘, this function should print the
+next n − 1 terms of the sequence.
+Note: These functions will help in understanding the concept of sequence generation,
+string parsing, and nested data structures in Python
+"""
+P9Code = """
+def parseString(aTerm):
+    retval = [[],[]]
+    return retval
+
+def nextTerm(term):
+    retval = ""
+    return retval
+
+def readIt(init, n):
+    print("TBD")
+
+readIt("1",7)
+
+"""
+DoProblem(P9Text, P9Code)
