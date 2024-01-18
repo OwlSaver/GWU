@@ -80,21 +80,21 @@ def countOLSubs(aString, aSubString):
 aTestString = "coding is cool"
 sTestSubString = "co"
 coss = countOLSubs(aTestString, sTestSubString)
-print(f"There are {coss} occurences of '{sTestSubString}' in '{aTestString}'.")
+print(f"There are {coss} occurrences of '{sTestSubString}' in '{aTestString}'.")
 aTestString = "This is a strange way to say how are we doing?"
 sTestSubString = "is"
 coss = countOLSubs(aTestString, sTestSubString)
-print(f"There are {coss} occurences of '{sTestSubString}' in '{aTestString}'.")
+print(f"There are {coss} occurrences of '{sTestSubString}' in '{aTestString}'.")
 aTestString = "aaaaaaaaaa"
 sTestSubString = "aa"
 coss = countOLSubs(aTestString, sTestSubString)
-print(f"There are {coss} occurences of '{sTestSubString}' in '{aTestString}'.")
+print(f"There are {coss} occurrences of '{sTestSubString}' in '{aTestString}'.")
 
 Execution:
 
-There are 2 occurences of 'co' in 'coding is cool'.
-There are 2 occurences of 'is' in 'This is a strange way to say how are we doing?'.
-There are 9 occurences of 'aa' in 'aaaaaaaaaa'.
+There are 2 occurrences of 'co' in 'coding is cool'.
+There are 2 occurrences of 'is' in 'This is a strange way to say how are we doing?'.
+There are 9 occurrences of 'aa' in 'aaaaaaaaaa'.
 
 #######################################################################################
 # Problem 4
@@ -230,17 +230,17 @@ def countVowels(aSentence):
             retval += 1
     return retval
 S = "During her summer vacation, Alice explored various historical sites and enjoyed local cuisines."
-print(f"The sentece '{S}' has {countVowels(S)} words that begin with a vowel.")
+print(f"The sentence '{S}' has {countVowels(S)} words that begin with a vowel.")
 S = "What time is it in Japan when it is 8:00 AM in Albania?"
-print(f"The sentece '{S}' has {countVowels(S)} words that begin with a vowel.")
+print(f"The sentence '{S}' has {countVowels(S)} words that begin with a vowel.")
 S = "Eager elephants eagerly enjoy eating enormous, exquisite, exotic apples every evening."
-print(f"The sentece '{S}' has {countVowels(S)} words that begin with a vowel.")
+print(f"The sentence '{S}' has {countVowels(S)} words that begin with a vowel.")
 
 Execution:
 
-The sentece 'During her summer vacation, Alice explored various historical sites and enjoyed local cuisines.' has 4 words that begin with a vowel.
-The sentece 'What time is it in Japan when it is 8:00 AM in Albania?' has 8 words that begin with a vowel.
-The sentece 'Eager elephants eagerly enjoy eating enormous, exquisite, exotic apples every evening.' has 11 words that begin with a vowel.
+The sentence 'During her summer vacation, Alice explored various historical sites and enjoyed local cuisines.' has 4 words that begin with a vowel.
+The sentence 'What time is it in Japan when it is 8:00 AM in Albania?' has 8 words that begin with a vowel.
+The sentence 'Eager elephants eagerly enjoy eating enormous, exquisite, exotic apples every evening.' has 11 words that begin with a vowel.
 
 #######################################################################################
 # Problem 8

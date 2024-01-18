@@ -90,15 +90,15 @@ def countOLSubs(aString, aSubString):
 aTestString = "coding is cool"
 sTestSubString = "co"
 coss = countOLSubs(aTestString, sTestSubString)
-print(f"There are {coss} occurences of '{sTestSubString}' in '{aTestString}'.")
+print(f"There are {coss} occurrences of '{sTestSubString}' in '{aTestString}'.")
 aTestString = "This is a strange way to say how are we doing?"
 sTestSubString = "is"
 coss = countOLSubs(aTestString, sTestSubString)
-print(f"There are {coss} occurences of '{sTestSubString}' in '{aTestString}'.")
+print(f"There are {coss} occurrences of '{sTestSubString}' in '{aTestString}'.")
 aTestString = "aaaaaaaaaa"
 sTestSubString = "aa"
 coss = countOLSubs(aTestString, sTestSubString)
-print(f"There are {coss} occurences of '{sTestSubString}' in '{aTestString}'.")
+print(f"There are {coss} occurrences of '{sTestSubString}' in '{aTestString}'.")
 """
 DoProblem(P3Text, P3Code)
 
@@ -229,11 +229,11 @@ def countVowels(aSentence):
             retval += 1
     return retval
 S = "During her summer vacation, Alice explored various historical sites and enjoyed local cuisines."
-print(f"The sentece '{S}' has {countVowels(S)} words that begin with a vowel.")
+print(f"The sentence '{S}' has {countVowels(S)} words that begin with a vowel.")
 S = "What time is it in Japan when it is 8:00 AM in Albania?"
-print(f"The sentece '{S}' has {countVowels(S)} words that begin with a vowel.")
+print(f"The sentence '{S}' has {countVowels(S)} words that begin with a vowel.")
 S = "Eager elephants eagerly enjoy eating enormous, exquisite, exotic apples every evening."
-print(f"The sentece '{S}' has {countVowels(S)} words that begin with a vowel.")
+print(f"The sentence '{S}' has {countVowels(S)} words that begin with a vowel.")
 """
 DoProblem(P7Text, P7Code)
 
