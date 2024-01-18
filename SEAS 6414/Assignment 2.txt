@@ -1,21 +1,5 @@
 
 #######################################################################################
-# This file has the problem statement and code solution for each problem. They are
-# stored in Python multi line strings. The function DoProblem prints the problem
-# statement, prints the code and then uses the exec() function to execute the code.
-# This worked fine for problems 1-8. For problem 9, the calling of functions defined 
-# in the exec() did not work. So, it is slighly different.
-#######################################################################################
-def DoProblem(ProblemDescription, ProblemCode):
-    print(ProblemDescription)
-    print("Code:")
-    print(ProblemCode)
-    print("Execution:")
-    print("")
-    exec(ProblemCode)
-
-P1Text = """
-#######################################################################################
 # Problem 1
 #######################################################################################
 
@@ -29,18 +13,21 @@ Work with Python list comprehensions to perform the following tasks:
   to form a new list. This time, include only the squares of the odd numbers from
 the original list. Print this new list.
 Note: The focus of this question is on using list comprehensions effectively.
-"""
-P1Code = """
+
+Code:
+
 import math
 aList = range(20)
 squareList = [x * x for x in aList]
 print(squareList)
 oddSquares = [x for x in squareList if math.sqrt(x) % 2 == 1]
 print(oddSquares)
-"""
-DoProblem(P1Text, P1Code)
 
-P2Text = """
+Execution:
+
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144, 169, 196, 225, 256, 289, 324, 361]
+[1, 9, 25, 49, 81, 121, 169, 225, 289, 361]
+
 #######################################################################################
 # Problem 2
 #######################################################################################
@@ -56,17 +43,19 @@ Apply Python dictionary comprehensions for text analysis with the following step
 - Output the resulting dictionary.
 Note: Focus on demonstrating your ability to use dictionary comprehensions in
       Python for processing and analyzing text data.
-"""
-P2Code = """
+
+Code:
+
 import re
 aSentence = "A sentence of words, for all to see."
-wordList = re.findall(r"\\w+|[^\\w\\s]", aSentence)
+wordList = re.findall(r"\w+|[^\w\s]", aSentence)
 wordDict = {x: len(x) for x in wordList}
 print(wordDict)
-"""
-DoProblem(P2Text, P2Code)
 
-P3Text = """
+Execution:
+
+{'A': 1, 'sentence': 8, 'of': 2, 'words': 5, ',': 1, 'for': 3, 'all': 3, 'to': 2, 'see': 3, '.': 1}
+
 #######################################################################################
 # Problem 3
 #######################################################################################
@@ -81,8 +70,9 @@ Develop a Python function to count occurrences of a substring within a given str
   return 2 as the output.
 Note: The focus is on string manipulation and search algorithms in Python. Consider
       edge cases, such as overlapping occurrences of the substring.
-"""
-P3Code = """
+
+Code:
+
 def countOLSubs(aString, aSubString):
     import re
     retval = len(re.findall(r'(?=' + aSubString + ')', aString))
@@ -99,10 +89,13 @@ aTestString = "aaaaaaaaaa"
 sTestSubString = "aa"
 coss = countOLSubs(aTestString, sTestSubString)
 print(f"There are {coss} occurences of '{sTestSubString}' in '{aTestString}'.")
-"""
-DoProblem(P3Text, P3Code)
 
-P4Text = """
+Execution:
+
+There are 2 occurences of 'co' in 'coding is cool'.
+There are 2 occurences of 'is' in 'This is a strange way to say how are we doing?'.
+There are 9 occurences of 'aa' in 'aaaaaaaaaa'.
+
 #######################################################################################
 # Problem 4
 #######################################################################################
@@ -119,8 +112,9 @@ Implement a Python function using list comprehension:
 Note: It is mandatory to use list comprehension for this task to demonstrate your
       proficiency in this Python feature. Ensure that all characters of the input string are
       considered, including repetitive ones.
-"""
-P4Code = """
+
+Code:
+
 def removeOneChar(aString):
     listOfStrings = [aString] * len(aString)
     listOfNewStrings = [x[:ind] + x[ind + 1:] for ind, x in enumerate(listOfStrings)]
@@ -131,10 +125,12 @@ print(f"The string '{aTestString}' generated the list '{aTestList}'.")
 aTestString = "look"
 aTestList  = removeOneChar(aTestString)
 print(f"The string '{aTestString}' generated the list '{aTestList}'.")
-"""
-DoProblem(P4Text, P4Code)
 
-P5Text = """
+Execution:
+
+The string 'Wale' generated the list '['ale', 'Wle', 'Wae', 'Wal']'.
+The string 'look' generated the list '['ook', 'lok', 'lok', 'loo']'.
+
 #######################################################################################
 # Problem 5
 #######################################################################################
@@ -151,15 +147,17 @@ Task:
   students and the values are their respective average scores.
 Note: This problem aims to enhance your skills in handling dictionaries, iterating
       over them, and performing calculations on their values in Python.
-"""
-P5Code = """
+
+Code:
+
 D = {"Jake" : [99, 87, 91, 77], "Charlie" : [100, 100, 99], "Ellen" : [95, 70, 85, 100, 100]}
 C = {key : sum(value) / len(value) for key, value in D.items()}
 print(C)
-"""
-DoProblem(P5Text, P5Code)
 
-P6Text = """
+Execution:
+
+{'Jake': 88.5, 'Charlie': 99.66666666666667, 'Ellen': 90.0}
+
 #######################################################################################
 # Problem 6
 #######################################################################################
@@ -180,8 +178,9 @@ Requirements:
 
 This exercise aims to enhance your skills in string manipulation, list handling, and
 conditional logic in Python.
-"""
-P6Code = """
+
+Code:
+
 sentence = "Tom enjoyed reading books on philosophy. He often pondered the deeper meanings of life, especially during quiet nights."
 words1 = sentence.split()
 outWords = []
@@ -190,10 +189,11 @@ for word in words1:
     if len(cleanWord) > 5:
         outWords.append(cleanWord)
 print(outWords)
-"""
-DoProblem(P6Text, P6Code)
 
-P7Text = """
+Execution:
+
+['enjoyed', 'reading', 'philosophy', 'pondered', 'deeper', 'meanings', 'especially', 'during', 'nights']
+
 #######################################################################################
 # Problem 7
 #######################################################################################
@@ -212,8 +212,9 @@ Task Objectives:
 - Use string methods split to separate words, replace to remove punctuation,
   and lower to standardize all characters to lowercase.
 Note: This exercise focuses on enhancing your string processing skills and understanding of basic Python string methods.
-"""
-P7Code = """
+
+Code:
+
 def countVowels(aSentence):
     retval = 0
     wordList = aSentence.split()
@@ -227,10 +228,13 @@ S = "What time is it in Japan when it is 8:00 AM in Albania?"
 print(f"The sentece '{S}' has {countVowels(S)} words that begin with a vowel.")
 S = "Eager elephants eagerly enjoy eating enormous, exquisite, exotic apples every evening."
 print(f"The sentece '{S}' has {countVowels(S)} words that begin with a vowel.")
-"""
-DoProblem(P7Text, P7Code)
 
-P8Text = """
+Execution:
+
+The sentece 'During her summer vacation, Alice explored various historical sites and enjoyed local cuisines.' has 4 words that begin with a vowel.
+The sentece 'What time is it in Japan when it is 8:00 AM in Albania?' has 8 words that begin with a vowel.
+The sentece 'Eager elephants eagerly enjoy eating enormous, exquisite, exotic apples every evening.' has 11 words that begin with a vowel.
+
 #######################################################################################
 # Problem 8
 #######################################################################################
@@ -243,14 +247,15 @@ matrix.
 - The identity matrix should be represented as a list of lists, where each inner list
 corresponds to a row in the matrix.
 - The diagonal elements of the matrix should be 1, and all other elements should be 0.
-"""
-P8Code = """
+
+Code:
+
 print([[1 if i == j else 0 for i in range(8)] for j in range(8)])
-"""
-DoProblem(P8Text, P8Code)
 
+Execution:
 
-P9Text = """
+[[1, 0, 0, 0, 0, 0, 0, 0], [0, 1, 0, 0, 0, 0, 0, 0], [0, 0, 1, 0, 0, 0, 0, 0], [0, 0, 0, 1, 0, 0, 0, 0], [0, 0, 0, 0, 1, 0, 0, 0], [0, 0, 0, 0, 0, 1, 0, 0], [0, 0, 0, 0, 0, 0, 1, 0], [0, 0, 0, 0, 0, 0, 0, 1]]
+
 #######################################################################################
 # Problem 9
 #######################################################################################
@@ -274,9 +279,9 @@ Functions to Implement:
 
 Note: These functions will help in understanding the concept of sequence generation,
       string parsing, and nested data structures in Python
-"""
 
-P9Code = """
+Code:
+
 def parseString(aTerm):
     rcnt = 0
     retval = []
@@ -303,43 +308,21 @@ def readIt(init, n):
         print(newTerm)
 
 readIt("1",7)
-print(" ")
-readIt("843111332",7)
-"""
-# Note: I could not get it to work with defining and using a function in an 
-#       exec() string. I searched but could not find an obvious solution. So
-#       for this problem I replicated the code and ran it directly.
-print(P9Text)
-print("Code:")
-print(P9Code)
-print("Execution:")
-print("")
-def parseString(aTerm):
-    rcnt = 0
-    retval = []
-    for i in range(len(aTerm)):
-        rcnt = rcnt + 1
-        if i == len(aTerm) - 1:
-            retval.append([rcnt, aTerm[i]])
-        else:
-            if aTerm[i] == aTerm[i+1]:
-                pass
-            else:
-                retval.append([rcnt, aTerm[i]])
-                rcnt = 0
-    return retval
 
-def nextTerm(aTerm):
-    retval = ''.join(str(x) for x in [a for b in parseString(aTerm) for a in b])
-    return retval
+Execution:
 
-def readIt(init, n):
-    print(f"Starting with {init} generating the next {n - 1} terms of the Look-and-Say sequence:")
-    newTerm = init
-    for i in range(n - 1):
-        newTerm = nextTerm(newTerm)
-        print(newTerm)
-
-readIt("1",7)
-print(" ")
-readIt("843111332",7)
+Starting with 1 generating the next 6 terms of the Look-and-Say sequence:
+11
+21
+1211
+111221
+312211
+13112221
+ 
+Starting with 843111332 generating the next 6 terms of the Look-and-Say sequence:
+181413312312
+1118111411231112131112
+31183114211213311211133112
+1321181321141221121123211231232112
+111312211811131221141122211221121312211213111213122112
+31131122211831131122211421322122211211131122211211133112111311222112
