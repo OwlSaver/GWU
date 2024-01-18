@@ -1,361 +1,256 @@
 
+def DoProblem(ProblemDescription, ProblemCode):
+    print(ProblemDescription)
+    print("Code:")
+    print(ProblemCode)
+    print("Execution:")
+    print("")
+    exec(ProblemCode)
+
+P1Text = """
+#######################################################################################
+# Problem 1
+#######################################################################################
+
+Problem:
+
+Work with Python list comprehensions to perform the following tasks:
+• Create a list of the first 20 positive integers.
+• Utilize list comprehension to generate a new list containing the squares of all
+the numbers in the original list. Print the resulting list.
+• Using the list created in the previous step, employ list comprehension once again
+to form a new list. This time, include only the squares of the odd numbers from
+the original list. Print this new list.
+Note: The focus of this question is on using list comprehensions effectively.
 """
-1. Determine the total number of bytes contained in one Gigabyte, given that one
-kilobyte equals 1024 bytes, one megabyte equals 1024 kilobytes, and one gigabyte
-equals 1024 megabytes.
-"""
-print("##################################################################################")
-print("# Problem 1")
-print("##################################################################################")
-kb = 1024
-print(f"There are {kb} bytes in a kilobyte.")
-mb = 1024 * kb
-print(f"There are {mb} bytes in a megabyte.")
-gb = 1024 * mb
-print(f"There are {gb} bytes in a gigabyte.")
-"""
-2. You purchased 450 shares of stock B at $550 each on day 0 and sold them at $950
-each on day 650. The daily discount rate is 0.00015%. Calculate the profit in terms
-of net present value (NPV).
-Note:
-NP V =
-X
-T
-t=0
-Rt
-(1 + r)
-t
-• NP V is the net present value.
-•
-P denotes the summation over time periods from 0 to T.
-• Rt represents the net cash flow (the amount of cash) at time t.
-• r is the discount rate.
-• t is the time period.
-"""
-print("##################################################################################")
-print("# Problem 2")
-print("##################################################################################")
-def NPVCalc(rate, values):
-    pspv = 0
-    for idx, cf in enumerate(values):
-        pspv = pspv + (cf/((1+rate)**idx))
-    return pspv
-shares = 450
-purchaseprice = 550
-saleprice = 950
-days = 650
-cfvalues = [0] * (days + 1)
-cfvalues[0] = shares * -1 * purchaseprice
-cfvalues[650] = shares * saleprice
-ir = 0.0000015
-print(f"Bought {shares} shares on day 0 for ${purchaseprice} for a total of ${shares * purchaseprice}.")
-print(f"Sold {shares} shares on day 650 for ${saleprice} for a total of ${shares * saleprice}.")
-print(f"Total profit is ${(shares * saleprice) - (shares * purchaseprice)}.")
-print(f"Using a rate of %{ir * 100} the NPV is {NPVCalc(ir,cfvalues)}.")
-"""
-3. For any numerical value x, develop a Python function that performs the following:
-    1. Instantiate a variable named even check which should be assigned True if x is
-    an even number, and False if x is odd.
-    2. Along with determining the parity of x, the function should also return the
-    square of x if it is even, or the square root of x if it is odd.
-"""
-print("##################################################################################")
-print("# Problem 3")
-print("##################################################################################")
+P1Code = """
 import math
-def esosr(x):
-    if x % 2 == 0:
-        even_check = True
-        retval = x * x
-    else:
-        even_check = False
-        retval = math.sqrt(x)
+aList = range(20)
+squareList = [x * x for x in aList]
+print(squareList)
+oddSquares = [x for x in squareList if math.sqrt(x) % 2 == 1]
+print(oddSquares)
+"""
+DoProblem(P1Text, P1Code)
+
+P2Text = """
+#######################################################################################
+# Problem 2
+#######################################################################################
+
+Problem:
+
+Apply Python dictionary comprehensions for text analysis with the following steps:
+• Given a sentence, split it into individual words. You may utilize the simple
+string split method available in Python.
+• Use dictionary comprehension to construct a dictionary. The keys should be
+the words obtained from the sentence, and the values should be the lengths of
+these respective words.
+• Output the resulting dictionary.
+Note: Focus on demonstrating your ability to use dictionary comprehensions in
+Python for processing and analyzing text data.
+"""
+P2Code = """
+import re
+aSentence = "A sentence of words, for all to see."
+wordList = re.findall(r"\w+|[^\w\s]", aSentence)
+wordDict = {x: len(x) for x in wordList}
+print(wordDict)
+"""
+DoProblem(P2Text, P2Code)
+
+P3Text = """
+#######################################################################################
+# Problem 3
+#######################################################################################
+
+Problem:
+
+Develop a Python function to count occurrences of a substring within a given string:
+• Take two strings as input: ‘str1‘ (the main string) and ‘str2‘ (the substring to
+search for).
+• Write a function to calculate how many times ‘str2‘ occurs within ‘str1‘.
+• For example, if ‘str1 = ”coding is cool”‘ and ‘str2 = ”co”‘, the function should
+return 2 as the output.
+Note: The focus is on string manipulation and search algorithms in Python. Consider
+edge cases, such as overlapping occurrences of the substring.
+"""
+P3Code = """
+def countOLSubs(aString, aSubString):
+    import re
+    retval = len(re.findall(r'(?=' + aSubString + ')', aString))
     return retval
+aTestString = "coding is cool"
+sTestSubString = "co"
+coss = countOLSubs(aTestString, sTestSubString)
+print(f"There are {coss} occurences of '{sTestSubString}' in '{aTestString}'.")
+aTestString = "This is a strange way to say how are we doing?"
+sTestSubString = "is"
+coss = countOLSubs(aTestString, sTestSubString)
+print(f"There are {coss} occurences of '{sTestSubString}' in '{aTestString}'.")
+aTestString = "aaaaaaaaaa"
+sTestSubString = "aa"
+coss = countOLSubs(aTestString, sTestSubString)
+print(f"There are {coss} occurences of '{sTestSubString}' in '{aTestString}'.")
+"""
+DoProblem(P3Text, P3Code)
 
-print(f"Even Square / Odd Square of {22} is {esosr(22)}")
-print(f"Even Square / Odd Square Root of {23} is {esosr(23)}")
+P4Text = """
+#######################################################################################
+# Problem 4
+#######################################################################################
 
-"""
-4. Correct the following variable (s) so it is equal to ”soccer”:
-s = ”sooter”
-"""
-print("##################################################################################")
-print("# Problem 4")
-print("##################################################################################")
-s = "sooter"
-print(f"The variable s is {s}")
-s = "soccer"
-print(f"The variable s is now {s}.")
-"""
-5. Develop a Python function that manipulates three given strings, s1, s2, and s3, to
-create a single string, consec ints, which contains a sequence of consecutive integers
-from 1 to 9 without repetition. The strings are defined as follows:
-s1 = ”12345”
-s2 = ”34567”
-s3 = ”789”
-"""
-print("##################################################################################")
-print("# Problem 5")
-print("##################################################################################")
-# concatenate two strings with overlapping suffix / prefix
-def concat_strings(str1, str2):
-    if len(str1) == 0 or len(str2) == 0:
-        return str1 + str2
-    for i in range(min(len(str1), len(str2)), 0, -1):
-        if str1.endswith(str2[:i]):
-            return str1 + str2[i:]
-    return str1 + str2
-# initializing list
-s1 = "12345"
-s2 = "34567"
-s3 = "789"
-result = concat_strings(s1, s2)
-result = concat_strings(result, s3)
-print(f"The resultant joined string: {result}")
-"""
-6. Create a Python function to handle the following list, which contains only integers:
-    M = [3, 12, 25, 8, 16, 42, 9, 32, 11]
-    The function should:
-    1. Identify and extract the first and last elements from the list M.
-    2. Calculate the sum of these two elements.
-    3. Store the result of this calculation in a variable named sum first last.
-    4. Ensure the function remains valid for any changes made to the contents of M.
-"""
-print("##################################################################################")
-print("# Problem 6")
-print("##################################################################################")
-def IsANumber(aValue):
-    if type(aValue) is int:
-        result = True
-    else:
-        if type(aValue) is str:
-                if aValue.isdecimal():
-                    print(f"The variable {aValue} is Numeric.")
-                    result = True
-                else:
-                    result = False
-        else:
-            result = False
-    return result
-#
-# Notes:
-#   Only works with integers
-#   If list is 1 item long, uses that item, does not double it
-#   Any error results in a return of zero, not useful, should raise and error
-def SumFirstLast(aList):
-    if type(aList) is list:
-        firstNumPos = 0
-        lastNumPos = len(aList) - 1
-        if IsANumber(aList[firstNumPos]):
-            if type(aList[firstNumPos]) is str:
-                firstNum = int(aList[firstNumPos])
-            else:
-                firstNum = aList[firstNumPos]
-            if len(aList) == 1:
-                sumfirstlast = firstNum
-            else:
-                if IsANumber(aList[lastNumPos]):
-                    if type(aList[lastNumPos]) is str:
-                        lastNum = int(aList[lastNumPos])
-                    else:
-                        lastNum = aList[lastNumPos]
-                    sumfirstlast = firstNum + lastNum
-                else:
-                    sumfirstlast = 0
-        else:
-            sumfirstlast = 0
-    else:
-        sumfirstlast = 0
-    return sumfirstlast
+Problem:
 
-M = [3, 12, 25, 8, 16, 42, 9, 32, 11]
-print(f"Case 1: List {M} Sum First Last {SumFirstLast(M)}.")
-M = [9, 12, 25, 8, 16, 42, 9, 32, 77]
-print(f"Case 2: List {M} Sum First Last {SumFirstLast(M)}.")
-M = [3]
-print(f"Case 3: List {M} Sum First Last {SumFirstLast(M)}.")
-M = ["A", 12, 25, 8, 16, 42, 9, 32, 11]
-print(f"Case 4: List {M} Sum First Last {SumFirstLast(M)}.")
+Implement a Python function using list comprehension:
+• Accept a string as input.
+• Using list comprehension, create a list of strings where each string is formed by
+removing one character at a time from the original string. Each element in the
+list should represent the original string minus one of its characters.
+• As an example, for the input string ”Wale”, the expected output is the list
+[”ale”, ”Wle”, ”W ae”, ”W al”].
+Note: It is mandatory to use list comprehension for this task to demonstrate your
+proficiency in this Python feature. Ensure that all characters of the input string are
+considered, including repetitive ones.
+"""
+P4Code = """
+def removeOneChar(aString):
+    listOfStrings = [aString] * len(aString)
+    listOfNewStrings = [x[:ind] + x[ind + 1:] for ind, x in enumerate(listOfStrings)]
+    return listOfNewStrings
+aTestString = "Wale"
+aTestList  = removeOneChar(aTestString)
+print(f"The string '{aTestString}' generated the list '{aTestList}'.")
+aTestString = "look"
+aTestList  = removeOneChar(aTestString)
+print(f"The string '{aTestString}' generated the list '{aTestList}'.")
+"""
+DoProblem(P4Text, P4Code)
 
+P5Text = """
+#######################################################################################
+# Problem 5
+#######################################################################################
+
+Problem:
+Problem: Work with dictionaries in Python to compute average scores:
+Given the dictionary D containing students’ names as keys and lists of their scores
+as values, create a new dictionary where each key is a student’s name and the corresponding value is their average score.
+The dictionary D is defined as follows:
+D = {”Jake” : [99, 87, 91, 77], ”Charlie” : [100, 100, 99], ”Ellen” : [95, 70, 85, 100, 100]}
+Task:
+• Iterate through the dictionary D and calculate the average score for each student.
+• Store the results in a new dictionary where the keys are the names of the
+students and the values are their respective average scores.
+Note: This problem aims to enhance your skills in handling dictionaries, iterating
+over them, and performing calculations on their values in Python.
 """
-7. Slice and combine elements of the list M to create the string ”data”.
-M = [4, ”d”, 8, ”t”, 15, ”a”, 16, 23, ”a”]
+P5Code = """
+D = {"Jake" : [99, 87, 91, 77], "Charlie" : [100, 100, 99], "Ellen" : [95, 70, 85, 100, 100]}
+C = {key : sum(value) / len(value) for key, value in D.items()}
+print(C)
 """
-print("##################################################################################")
-print("# Problem 7")
-print("##################################################################################")
-M = [4, "d", 8, "t", 15, "a", 16, 23, "a"]
-N = M[1:2:]+M[5:6:]+M[3:4:]+M[8:9:]
-NString = ''.join(N)
-print(f"M is {M}")
-print(f"N is {N}")
-print(f"N as a string is {NString}")
+DoProblem(P5Text, P5Code)
+
+P6Text = """
+#######################################################################################
+# Problem 6
+#######################################################################################
+
+Problem:
+Develop a Python program to filter and store specific words from a sentence. Follow
+these steps:
+• Split the given sentence into individual words.
+• Use the strip method to remove punctuation from each word.
+• Utilize the append method to add words to a new list, but only include those
+that are longer than 5 letters.
+Given Sentence: ”Tom enjoyed reading books on philosophy. He often pondered
+the deeper meanings of life, especially during quiet nights.”
+Requirements:
+• Create a list of all words in the sentence that exceed 5 letters in length.
+• Ensure punctuation is excluded when determining the length of each word.
+This exercise aims to enhance your skills in string manipulation, list handling, and
+conditional logic in Python.
 """
-8. Develop a Python function to process a list L of numbers with an odd length. The
-function should:
-    1. Validate that the length of L is odd. If not, raise an appropriate error.
-    2. Find the median element of L without using any built-in median or statistics
-    functions.
-    3. Slice out all elements indexed lower than the index of the median element and
-    store them in a new list.
-    You should create the list L of numbers of odd length and ensure these tasks are
-    performed without altering the original list L.
+P6Code = """
+sentence = "Tom enjoyed reading books on philosophy. He often pondered the deeper meanings of life, especially during quiet nights."
+words1 = sentence.split()
+outWords = []
+for word in words1:
+    cleanWord = word.strip(".,")
+    if len(cleanWord) > 5:
+        outWords.append(cleanWord)
+print(outWords)
+
+        
 """
-print("##################################################################################")
-print("# Problem 8")
-print("##################################################################################")
-def medianFind(aList):
-    if type(aList) is list:
-        print(f"The list to be processed is {aList}")
-        aListLen = len(aList)
-        if aListLen % 2 == 0:
-            raise Exception("The list does not have an odd number of elements.")
-        else:
-            if aListLen == 1:
-                medianIndex = 0
-                LL = []
-            else:
-                medianIndex = int(aListLen / 2)
-                LL = aList[0:medianIndex:1]
-            print(f"Median index is {medianIndex}")
-            print(f"Lower values are {LL}")
-    else:
-        raise TypeError("The value provided is not a list.")
-L = 17
-print(f"L is currently {L}.")
-try:
-    medianFind(L)
-except:
-    print("An error occurred.")
-else:
-    print(f"Verifying that L has not changed {L}")
-L = [1]
-print(f"L is currently {L}.")
-try:
-    medianFind(L)
-except:
-    print("An error occurred.")
-else:
-    print(f"Verifying that L has not changed {L}")
-L = [1,2,3,4]
-print(f"L is currently {L}.")
-try:
-    medianFind(L)
-except:
-    print("An error occurred.")
-else:
-    print(f"Verifying that L has not changed {L}")
-L = [1,2,3,4,5]
-print(f"L is currently {L}.")
-try:
-    medianFind(L)
-except:
-    print("An error occurred.")
-else:
-    print(f"Verifying that L has not changed {L}")
+DoProblem(P6Text, P6Code)
+
+P6Text = """
+#######################################################################################
+# Problem 6
+#######################################################################################
+
+Problem:
+Develop a Python program to filter and store specific words from a sentence. Follow
+these steps:
+• Split the given sentence into individual words.
+• Use the strip method to remove punctuation from each word.
+• Utilize the append method to add words to a new list, but only include those
+that are longer than 5 letters.
+Given Sentence: ”Tom enjoyed reading books on philosophy. He often pondered
+the deeper meanings of life, especially during quiet nights.”
+Requirements:
+• Create a list of all words in the sentence that exceed 5 letters in length.
+• Ensure punctuation is excluded when determining the length of each word.
+This exercise aims to enhance your skills in string manipulation, list handling, and
+conditional logic in Python.
 """
-9. Create a variable called ”name” that stores your full name. Find whether your name
-has an even or odd number of letters.
+P6Code = """
+sentence = "Tom enjoyed reading books on philosophy. He often pondered the deeper meanings of life, especially during quiet nights."
+words1 = sentence.split()
+outWords = []
+for word in words1:
+    cleanWord = word.strip(".,")
+    if len(cleanWord) > 5:
+        outWords.append(cleanWord)
+print(outWords)
 """
-print("##################################################################################")
-print("# Problem 9")
-print("##################################################################################")
-name = "Michael Wacey"
-nameLen = len(name)
-if nameLen % 2 == 0:
-    nameCount = "Even"
-else:
-    nameCount = "Odd"
-print(f"My name is {name}, it has {nameLen} characters which is an {nameCount} number.")
+DoProblem(P6Text, P6Code)
+
+P7Text = """
+#######################################################################################
+# Problem 7
+#######################################################################################
+
+Problem:
+
+Write a Python program to count words starting with a vowel in a sentence. The
+program should be adaptable to any given sentence. Employ the split, replace,
+and lower methods for this task.
+Sample Sentence: ”During her summer vacation, Alice explored various historical
+sites and enjoyed local cuisines.”
+Task Objectives:
+• Process the sentence to identify and count words beginning with a vowel (a, e,
+i, o, u).
+• Ensure the program can handle different sentences and is not case-sensitive.
+• Use string methods split to separate words, replace to remove punctuation,
+and lower to standardize all characters to lowercase.
+Note: This exercise focuses on enhancing your string processing skills and understanding of basic Python string methods.
 """
-10. Develop a Python function that processes a list M of mixed data types, including
-integers, strings, and potentially other Python objects. The function should:
-    1. Validate that M contains at least one string that represents a numeric value
-    (e.g., '3', '42').
-    2. Find the first occurrence of such a string, convert it to an integer, and identify
-    its position in the list.
-    3. Check if the integer value is odd or even:
-        • If it's odd, slice the list M from the start to the position of this integer
-        (exclusive) and calculate the sum of all numeric elements in this slice. Store
-        this sum in a variable odd sum.
-        • If it's even, slice the list from the position of this integer (exclusive) to the
-        end of the list (inclusive) and create a new list even elements containing
-        only string elements from this slice.
-    For example, given a list M = [5, ”10”, ”Python”, 3.14, ”7”], the function should
-    identify ”10” as the first string representing a numeric value, determine it's even,
-    and return [”Python”, ”7”].
+P7Code = """
+def countVowels(aSentence):
+    retval = 0
+    wordList = aSentence.split()
+    for word in wordList:
+        if word.replace(",","").replace(".","").replace("?","").lower()[0] in "aeiou":
+            retval += 1
+    return retval
+S = "During her summer vacation, Alice explored various historical sites and enjoyed local cuisines."
+print(f"The sentece '{S}' has {countVowels(S)} words that begin with a vowel.")
+S = "What time is it in Japan when it is 8:00 AM in Albania?"
+print(f"The sentece '{S}' has {countVowels(S)} words that begin with a vowel.")
+S = "Eager elephants eagerly enjoy eating enormous, exquisite, exotic apples every evening."
+print(f"The sentece '{S}' has {countVowels(S)} words that begin with a vowel.")
 """
-print("##################################################################################")
-print("# Problem 10")
-print("##################################################################################")
-def FindFirstStringNumeric(aList):
-    result = 0
-    for idx, anElement in enumerate(aList):
-        if type(anElement) is str:
-            if anElement.isdecimal():
-                result = idx
-                break
-    return result
-def FindOnlyStrings(aList):
-    result = []
-    for anElement in aList:
-        if type(anElement) is str:
-            result.append(anElement)
-    return result
-def SumNumerics(aList):
-    result = 0
-    for anElement in aList:
-        if type(anElement) is int or type(anElement) is float:
-            result = result + anElement
-    return result
-def pullinfo(aList):
-    if type(aList) is list:
-        print(f"The list to be processed is {aList}")
-        firstStringNumericIndex = FindFirstStringNumeric(aList)
-        if firstStringNumericIndex == 0:
-            raise Exception("The list does not have string that is a numeric.")
-        else:
-            firstStringNumeric = int(aList[firstStringNumericIndex])
-            if firstStringNumeric % 2 == 0:
-                print(f"The first string numeric is at position {firstStringNumericIndex} and has the value {firstStringNumeric} which is an even number.")
-                newList = aList[firstStringNumericIndex+1::]
-                result = FindOnlyStrings(newList)
-            else:
-                print(f"The first string numeric is at position {firstStringNumericIndex} and has the value {firstStringNumeric} which is an odd number.")
-                newList = aList[0:firstStringNumericIndex:]
-                result = SumNumerics(newList)
-    else:
-        raise TypeError("The value provided is not a list.")
-    return result
-M = 17
-print(f"M is currently {M}.")
-try:
-    R = pullinfo(M)
-except:
-    print("An error occurred.")
-else:
-    print(f"The result of pullinfo on {M} is {R}")
-M = [5, "10", "Python", 3.14, "7"]
-print(f"M is currently {M}.")
-try:
-    R = pullinfo(M)
-except:
-    print("An error occurred.")
-else:
-    print(f"The result of pullinfo on {M} is {R}")
-M = [5, "11", "Python", 3.14, "7"]
-print(f"M is currently {M}.")
-try:
-    R = pullinfo(M)
-except:
-    print("An error occurred.")
-else:
-    print(f"The result of pullinfo on {M} is {R}")
-M = [5, 3, "11", "Python", 3.14, "7"]
-print(f"M is currently {M}.")
-try:
-    R = pullinfo(M)
-except:
-    print("An error occurred.")
-else:
-    print(f"The result of pullinfo on {M} is {R}")
+DoProblem(P7Text, P7Code)
