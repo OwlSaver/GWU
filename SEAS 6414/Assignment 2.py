@@ -27,7 +27,7 @@ Work with Python list comprehensions to perform the following tasks:
   the numbers in the original list. Print the resulting list.
 - Using the list created in the previous step, employ list comprehension once again
   to form a new list. This time, include only the squares of the odd numbers from
-the original list. Print this new list.
+  the original list. Print this new list.
 Note: The focus of this question is on using list comprehensions effectively.
 """
 P1Code = """
@@ -140,15 +140,20 @@ P5Text = """
 #######################################################################################
 
 Problem:
-Problem: Work with dictionaries in Python to compute average scores:
+
+Work with dictionaries in Python to compute average scores:
 Given the dictionary D containing students' names as keys and lists of their scores
-as values, create a new dictionary where each key is a student's name and the corresponding value is their average score.
+as values, create a new dictionary where each key is a student's name and the
+corresponding value is their average score.
+
 The dictionary D is defined as follows:
 D = {"Jake" : [99, 87, 91, 77], "Charlie" : [100, 100, 99], "Ellen" : [95, 70, 85, 100, 100]}
+
 Task:
 - Iterate through the dictionary D and calculate the average score for each student.
 - Store the results in a new dictionary where the keys are the names of the
   students and the values are their respective average scores.
+
 Note: This problem aims to enhance your skills in handling dictionaries, iterating
       over them, and performing calculations on their values in Python.
 """
@@ -165,6 +170,7 @@ P6Text = """
 #######################################################################################
 
 Problem:
+
 Develop a Python program to filter and store specific words from a sentence. Follow
 these steps:
 - Split the given sentence into individual words.
@@ -174,6 +180,7 @@ these steps:
 
 Given Sentence: "Tom enjoyed reading books on philosophy. He often pondered
 the deeper meanings of life, especially during quiet nights."
+
 Requirements:
 - Create a list of all words in the sentence that exceed 5 letters in length.
 - Ensure punctuation is excluded when determining the length of each word.
@@ -239,9 +246,9 @@ Problem:
 Use list comprehension to generate an n x n identity matrix.
 Task:
 - Write a one-line Python code using list comprehension to create an nxn identity
-matrix.
+  matrix.
 - The identity matrix should be represented as a list of lists, where each inner list
-corresponds to a row in the matrix.
+  corresponds to a row in the matrix.
 - The diagonal elements of the matrix should be 1, and all other elements should be 0.
 """
 P8Code = """
@@ -261,6 +268,7 @@ Implement functions to generate the Look-and-Say sequence, which follows a patte
 of reading off the numbers of digits in groups of the same digit:
 
 1, 11, 21, 1211, 111221, 312211, 13112221, . . .
+
 Functions to Implement:
 - Parse String(term): Accepts a term from the sequence as a string and returns
   a list of lists. Each sub-list contains two elements: the digit and the count of
@@ -305,6 +313,7 @@ def readIt(init, n):
 readIt("1",7)
 print(" ")
 readIt("843111332",7)
+print(" ")
 """
 # Note: I could not get it to work with defining and using a function in an 
 #       exec() string. I searched but could not find an obvious solution. So
@@ -343,3 +352,4 @@ def readIt(init, n):
 readIt("1",7)
 print(" ")
 readIt("843111332",7)
+print(" ")
