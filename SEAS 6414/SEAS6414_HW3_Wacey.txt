@@ -1,19 +1,4 @@
-#######################################################################################
-# This file has the problem statement and code solution for each problem. They are
-# stored in Python multi line strings. The function DoProblem prints the problem
-# statement, prints the code and then uses the exec() function to execute the code.
-# This worked fine for problems 1-8. For problem 9, the calling of functions defined 
-# in the exec() did not work. So, it is slighly different.
-#######################################################################################
-def DoProblem(ProblemDescription, ProblemCode):
-    print(ProblemDescription)
-    print("Code:")
-    print(ProblemCode)
-    print("Execution:")
-    print("")
-    exec(ProblemCode)
 
-P1Text = """
 #######################################################################################
 # Problem 1
 #######################################################################################
@@ -33,8 +18,9 @@ Problem Statement:
   For the provided array x, your function should return:
   - Unique elements array: [1, 2, 3, 4, 5, 6]
   - Counts array: [2, 3, 3, 2, 2, 2]
-"""
-P1Code = """
+
+Code:
+
 import numpy as np
 def UniqueElements(anArray):
   import numpy as np
@@ -43,10 +29,12 @@ def UniqueElements(anArray):
   print(f"Counts array: {ca}")
 x = np.array([3, 1, 4, 2, 4, 3, 6, 1, 2, 5, 5, 6, 2, 3])
 UniqueElements(x)
-"""
-DoProblem(P1Text, P1Code)
 
-P2Text = """
+Execution:
+
+Unique elements array: [1 2 3 4 5 6]
+Counts array: [2 3 3 2 2 2]
+
 #######################################################################################
 # Problem 2
 #######################################################################################
@@ -68,17 +56,20 @@ itself.)
 
 Expected Output: A NumPy array containing the average values for each specified
 N.
-"""
-P2Code = r"""
+
+Code:
+
 import numpy as np
 S = {5, 20, 100, 500, 2000, 50000}
 T = np.array([np.average(np.random.normal(10,5,N)) for N in S])
 np.save('.\\HW3Output.npy',T)
 print(T)
-"""
-DoProblem(P2Text, P2Code)
 
-P3Text = """
+
+Execution:
+
+[ 9.92240637 10.00547795 10.16160839  9.04581491 10.01050571 13.37951234]
+
 #######################################################################################
 # Problem 3
 #######################################################################################
@@ -100,8 +91,9 @@ Example:
 
 Implementation Requirement:
 - Utilize NumPy's capabilities for efficient string manipulation and array processing.
-"""
-P3Code = """
+
+Code:
+
 import numpy as np
 def PadTo5(anArray):
     import numpy as np
@@ -116,10 +108,14 @@ M = np.array(['2', '11', '234', '1234', '12345', '1234567'])
 print(f"Original Array: {M}")
 N = PadTo5(M)
 print(f"Formatted Output: {N}")
-"""
-DoProblem(P3Text, P3Code)
 
-P4Text = """
+Execution:
+
+Original Array: ['2' '11' '234' '1234' '12345']
+Formatted Output: ['00002' '00011' '00234' '01234' '12345']
+Original Array: ['2' '11' '234' '1234' '12345' '1234567']
+Formatted Output: ['00002' '00011' '00234' '01234' '12345' '1234567']
+
 #######################################################################################
 # Problem 4
 #######################################################################################
@@ -141,9 +137,9 @@ Task Details:
 
 Example: For a point (x, y) in the Cartesian coordinate system, the corresponding
 polar coordinates (r, theta) should be computed and stored in the resulting matrix.
-"""
 
-P4Code = """
+Code:
+
 import numpy as np
 def Cart2Polar(cartArray):
   import numpy as np
@@ -159,10 +155,32 @@ print("Cartesian")
 print(cartArray)
 print("Polar")
 print(polarArray)
-"""
-DoProblem(P4Text, P4Code)
 
-P5Text = """
+Execution:
+
+Cartesian
+[[ 65.3408 -12.4547]
+ [-12.6333 -25.657 ]
+ [-54.4387  37.0352]
+ [-58.2536  63.5461]
+ [ 46.9209 -57.0752]
+ [ 28.96    99.846 ]
+ [ 48.9454  -9.0583]
+ [ 12.0659 -69.5038]
+ [ 56.6431  76.789 ]
+ [-12.4392  75.1779]]
+Polar
+[[ 66.5172  -0.1884]
+ [ 28.5986   1.1133]
+ [ 65.8421  -0.5974]
+ [ 86.2067  -0.8288]
+ [ 73.886   -0.8827]
+ [103.961    1.2885]
+ [ 49.7765  -0.183 ]
+ [ 70.5433  -1.3989]
+ [ 95.4201   0.9352]
+ [ 76.2     -1.4068]]
+
 #######################################################################################
 # Problem 5
 #######################################################################################
@@ -187,8 +205,9 @@ Covariance Formula:
 
 Expected Output:
 - A 2x2 covariance matrix representing the covariance between x and y.
-"""
-P5Code = """
+
+Code:
+
 import numpy as np
 def cov_value(x,y):
   mean_x = sum(x) / float(len(x))
@@ -218,15 +237,25 @@ print("Manually calculated covariance:")
 print(covariance(x, y))
 print("NumPy calculated covariance:")
 print(np.cov(x, y))
-"""
-print(P5Text)
-print("Code:")
-print(P5Code)
-print("Execution:")
-print("")
-exec(P5Code)
 
-P6Text = """
+Execution:
+
+The x array is [1 2 3 4 5] and the y array is [1 1 1 1 1].
+Manually calculated covariance:
+[[2.5 0. ]
+ [0.  0. ]]
+NumPy calculated covariance:
+[[2.5 0. ]
+ [0.  0. ]]
+
+The x array is [-14.99  57.3  -79.23 -78.61   3.78 -76.67 -64.8   30.17  53.77 -38.41] and the y array is [-60.32 -90.52 -80.19  92.92  31.46   2.43 -84.1  -33.76 -76.9  -43.03].
+Manually calculated covariance:
+[[ 3002.13 -1161.67]
+ [-1161.67  3574.57]]
+NumPy calculated covariance:
+[[ 3002.13 -1161.67]
+ [-1161.67  3574.57]]
+
 #######################################################################################
 # Problem 6
 #######################################################################################
@@ -252,8 +281,9 @@ Task Details:
               4  5  6  7
               .. .. .. ..
 - Provide the Python code for generating the 2D matrix from 'arr'.
-"""
-P6Code = """
+
+Code:
+
 import numpy as np
 window = 4
 stride = 2
@@ -269,10 +299,24 @@ print(arr)
 print("")
 print(f"Using the input vector with a window of {window} and stride of {stride} results in:")
 print(newarr)
-"""
-DoProblem(P6Text, P6Code)
 
-P7Text = """
+
+
+Execution:
+
+Input vector is:
+[ 0  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19]
+
+Using the input vector with a window of 4 and stride of 2 results in:
+[[ 0  1  2  3]
+ [ 2  3  4  5]
+ [ 4  5  6  7]
+ [ 6  7  8  9]
+ [ 8  9 10 11]
+ [10 11 12 13]
+ [12 13 14 15]
+ [14 15 16 17]]
+
 #######################################################################################
 # Problem 7
 #######################################################################################
@@ -306,8 +350,9 @@ Example:
 Submission:
 - Provide the Python code for your one-hot encoding function. The ONLY library
   you should import to solve this problem is Numpy.
-"""
-P7Code = """
+
+Code:
+
 import numpy as np
 def OneHotEncoding(aVector):
   cols = int(np.max(aVector) + 0.5)
@@ -321,5 +366,14 @@ OHE = OneHotEncoding(vec)
 print(f"The input vector is: {vec}.")
 print("The one-hot encoding is:")
 print(OHE)
-"""
-DoProblem(P7Text, P7Code)
+
+Execution:
+
+The input vector is: [2 3 2 4 1 2].
+The one-hot encoding is:
+[[0 1 0 0]
+ [0 0 1 0]
+ [0 1 0 0]
+ [0 0 0 1]
+ [1 0 0 0]
+ [0 1 0 0]]
