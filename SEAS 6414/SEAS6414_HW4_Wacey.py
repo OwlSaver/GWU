@@ -103,6 +103,7 @@ HW4F1New = HW4F1.groupby("merchant").agg(
     , trans_frequency=("amount_usd_in_cents", "count")
     , trans_recency=("time", "max")
 )
+HW4F1New['lll'] = "A"
 
 
 
