@@ -93,17 +93,20 @@ Final Deliverables:
 P1Code = """
 import pandas as pd
 import numpy as np
+import datetime as dt
 HW4F1 = pd.read_csv(r".\gwu\SEAS 6414\homework4_file1.csv")
+HW4F1.sort_values(by=['merchant', 'time'], inplace=True)
 print(HW4F1)
+
 HW4F1New = HW4F1.groupby("merchant").agg(
     min_amount=("amount_usd_in_cents", "min")
     , max_amount=("amount_usd_in_cents", "max")
     , trans_amount_avg=("amount_usd_in_cents", "mean")
     , trans_amount_volume=("amount_usd_in_cents", "sum")
     , trans_frequency=("amount_usd_in_cents", "count")
-    , trans_recency=("time", "max")
+    , most_recent_date=("time", "max")
 )
-HW4F1New['lll'] = "A"
+HW4F1New['trans_recency'] = (pd.to_datetime(HW4F1New['most_recent_date']) - dt.datetime(2035, 1, 1)).dt.days
 
 
 
