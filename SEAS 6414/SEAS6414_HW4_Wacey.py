@@ -1,44 +1,37 @@
 
 """
 
-2. You are provided with two datasets: sales data.csv and product info.csv.
-• sales data.csv contains transaction records with columns: ’TransactionID’,
-’ProductID’, ’Date’, ’Quantity’, and ’Price’.
-• product info.csv contains product details with columns: ’ProductID’, ’ProductName’, ’Category’.
-Your task involves multiple steps of data manipulation using Pandas and NumPy to
-extract insights from these datasets.
+
+
+
+
+3. Zillow’s marketplace offers a data-driven home valuation platform utilized by a diverse range of users including home buyers, sellers, renters, homeowners, real estate
+agents, mortgage providers, property managers, and landlords. The machine learning
+and data science team at Zillow employs various tools for predicting home valuations,
+such as Zestimate (Zillow Estimate), Zestimate Forecast, Zillow Home Value Index,
+Rent Zestimate, Zillow Rent Index, and the Pricing Tool.
+Assignment Overview:
+You are provided with a dataset named zillow feature sample.csv, containing
+various features relevant to Zillow’s marketplace. Accompanying the dataset is a
+data dictionary titled zillow data dictionary.xlsx, which details the description
+of each column.
 Tasks:
-1. Data Loading and Merging:
-• Load both datasets using Pandas.
-• Merge them into a single DataFrame on ’ProductID’.
-2. Data Cleaning:
-• Check for and handle any missing values in the merged dataset.
-• Convert the ’Date’ column to a DateTime object.
-3. Data Analysis using Slicing and Indexing:
-• Create a new column ’TotalSale’, calculated as ’Quantity’ * ’Price’.
-• Using slicing, create a subset DataFrame containing only transactions from
-the last quarter of the year (October, November, December).
-• Using Boolean indexing, find all transactions for a specific ’Category’ (e.g.,
-’Electronics’).
-• Extract all transactions where the ’TotalSale’ is above the 75th percentile
-of the ’TotalSale’ column using NumPy functions.
-4. Advanced Indexing:
-• Using loc and iloc, perform the following:
-– Select all rows for ’ProductID’ 101 and columns ’ProductName’ and
-’TotalSale’.
-– Select every 10th row from the merged dataset and only the columns
-’Date’ and ’Category’.
-5. Grouping and Aggregation:
-• Group the data by ’Category’ and calculate the total and average ’TotalSale’
-for each category.
-6. Time-Series Analysis:
-• Resample the data on a monthly basis and calculate the total ’Quantity’
-sold per month.
-Page 2
-Final Deliverables:
-• Provide the code for each step.
-• Include comments explaining your approach.
-• Display the first 5 rows of the DataFrame after each major step.
+1. Develop a Missing Data Strategy:
+• Assess the zillow feature sample.csv dataset and devise a comprehensive strategy to handle missing data.
+2. Quantitative Analysis of Missing Data:
+• Calculate and report the percentage of missing data in each feature of the
+dataset.
+• Analyze and infer the potential mechanism of missing data (e.g., Missing
+Completely at Random, Missing at Random, Missing Not at Random).
+3. Imputation Strategy:
+• Propose and justify an imputation strategy for the missing values in the
+dataset. Your rationale should be data-driven and well-explained.
+4. Open-Ended Exploration:
+• This question is open-ended, allowing you to explore other relevant aspects
+of the dataset. Conduct additional analyses or apply data processing techniques as appropriate.
+Submission Guidelines:
+• Document your analysis and findings in a clear and structured format.
+• Ensure that your submission is thorough and well-reasoned.
 
 """
 
@@ -85,6 +78,7 @@ Task: Generate the following features for each unique merchant:
 • avg trans growth rate: Average growth rate in transaction amounts.
 
 Data Dimension: The dataset is N by 3, where N is the number of records.
+
 Final Deliverables:
 • Shape of the new dataset.
 • The top five rows of the new dataset using new dataset.head().
@@ -95,9 +89,9 @@ import pandas as pd
 import numpy as np
 import datetime as dt
 HW4F1 = pd.read_csv(r".\gwu\SEAS 6414\homework4_file1.csv")
+# Make the time column a Pandas time rather than a string
+HW4F1['time'] = [pd.Timestamp(ts) for ts in HW4F1.time]
 HW4F1.sort_values(by=['merchant', 'time'], inplace=True)
-print(HW4F1)
-
 HW4F1New = HW4F1.groupby("merchant").agg(
     min_amount=("amount_usd_in_cents", "min")
     , max_amount=("amount_usd_in_cents", "max")
@@ -105,12 +99,21 @@ HW4F1New = HW4F1.groupby("merchant").agg(
     , trans_amount_volume=("amount_usd_in_cents", "sum")
     , trans_frequency=("amount_usd_in_cents", "count")
     , most_recent_date=("time", "max")
+    , avg_time_btwn_trans=("time", lambda group: group.sort_values().diff().mean().seconds/(60*60))
+    , avg_trans_growth_rate=("amount_usd_in_cents", lambda group: group.sort_values().pct_change().mean())
 )
-HW4F1New['trans_recency'] = (pd.to_datetime(HW4F1New['most_recent_date']) - dt.datetime(2035, 1, 1)).dt.days
+# I tried to do this as a Lamda in the agg, but it would not recognize the dt library
+# So, in the agg, I find the max and here I calculate the delta
+HW4F1New['trans_recency'] = (HW4F1New['most_recent_date'] - dt.datetime(2035, 1, 1)).dt.days
+# getting rid of the no longer needed maximum value
+HW4F1Final = HW4F1New.drop(columns=['most_recent_date'])
 
-
-
-print(HW4F1New)
+print(f"The shape of the original dataframe is: {HW4F1.shape}")
+print(f"The shape of the new dataframe is: {HW4F1Final.shape}")
+print("The top five rows are:")
+print(HW4F1Final.head(5))
+print("Descriptive statistics:")
+print(HW4F1Final.describe())
 """
 DoProblem(P1Text, P1Code)
 
@@ -121,21 +124,44 @@ P2Text = """
 
 Problem:
 
-Generate a series of normal random variables for different sample sizes and compute
-their averages.
-Task:
-- For each N in {5, 20, 100, 500, 2000, 50000}, generate N normal random
-  variables.
-- Each set of random variables should have a mean of 10 and a standard deviation
-  of 5.
-- Compute the average of these random variables for each N.
-- Store the averages in a NumPy array.
-- Additionally, write the results to a file using NumPy's save function.
-Provide a printout of the final array. (Note: You do not need to submit the file
-itself.)
-
-Expected Output: A NumPy array containing the average values for each specified
-N.
+You are provided with two datasets: sales data.csv and product info.csv.
+• sales data.csv contains transaction records with columns: ’TransactionID’,
+’ProductID’, ’Date’, ’Quantity’, and ’Price’.
+• product info.csv contains product details with columns: ’ProductID’, ’ProductName’, ’Category’.
+Your task involves multiple steps of data manipulation using Pandas and NumPy to
+extract insights from these datasets.
+Tasks:
+1. Data Loading and Merging:
+• Load both datasets using Pandas.
+• Merge them into a single DataFrame on ’ProductID’.
+2. Data Cleaning:
+• Check for and handle any missing values in the merged dataset.
+• Convert the ’Date’ column to a DateTime object.
+3. Data Analysis using Slicing and Indexing:
+• Create a new column ’TotalSale’, calculated as ’Quantity’ * ’Price’.
+• Using slicing, create a subset DataFrame containing only transactions from
+the last quarter of the year (October, November, December).
+• Using Boolean indexing, find all transactions for a specific ’Category’ (e.g.,
+’Electronics’).
+• Extract all transactions where the ’TotalSale’ is above the 75th percentile
+of the ’TotalSale’ column using NumPy functions.
+4. Advanced Indexing:
+• Using loc and iloc, perform the following:
+– Select all rows for ’ProductID’ 101 and columns ’ProductName’ and
+’TotalSale’.
+– Select every 10th row from the merged dataset and only the columns
+’Date’ and ’Category’.
+5. Grouping and Aggregation:
+• Group the data by ’Category’ and calculate the total and average ’TotalSale’
+for each category.
+6. Time-Series Analysis:
+• Resample the data on a monthly basis and calculate the total ’Quantity’
+sold per month.
+Page 2
+Final Deliverables:
+• Provide the code for each step.
+• Include comments explaining your approach.
+• Display the first 5 rows of the DataFrame after each major step.
 """
 P2Code = r"""
 import numpy as np
