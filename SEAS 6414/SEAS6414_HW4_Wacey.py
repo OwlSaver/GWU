@@ -5,14 +5,14 @@
 
 
 
-3. Zillow’s marketplace offers a data-driven home valuation platform utilized by a diverse range of users including home buyers, sellers, renters, homeowners, real estate
+3. Zillow's marketplace offers a data-driven home valuation platform utilized by a diverse range of users including home buyers, sellers, renters, homeowners, real estate
 agents, mortgage providers, property managers, and landlords. The machine learning
 and data science team at Zillow employs various tools for predicting home valuations,
 such as Zestimate (Zillow Estimate), Zestimate Forecast, Zillow Home Value Index,
 Rent Zestimate, Zillow Rent Index, and the Pricing Tool.
 Assignment Overview:
 You are provided with a dataset named zillow feature sample.csv, containing
-various features relevant to Zillow’s marketplace. Accompanying the dataset is a
+various features relevant to Zillow's marketplace. Accompanying the dataset is a
 data dictionary titled zillow data dictionary.xlsx, which details the description
 of each column.
 Tasks:
@@ -125,50 +125,104 @@ P2Text = """
 Problem:
 
 You are provided with two datasets: sales data.csv and product info.csv.
-• sales data.csv contains transaction records with columns: ’TransactionID’,
-’ProductID’, ’Date’, ’Quantity’, and ’Price’.
-• product info.csv contains product details with columns: ’ProductID’, ’ProductName’, ’Category’.
+- sales data.csv contains transaction records with columns: 'TransactionID',
+  'ProductID', 'Date', 'Quantity', and 'Price'.
+- product info.csv contains product details with columns: 'ProductID', 'ProductName', 'Category'.
+ 
 Your task involves multiple steps of data manipulation using Pandas and NumPy to
 extract insights from these datasets.
+
 Tasks:
 1. Data Loading and Merging:
-• Load both datasets using Pandas.
-• Merge them into a single DataFrame on ’ProductID’.
+- Load both datasets using Pandas.
+- Merge them into a single DataFrame on 'ProductID'.
 2. Data Cleaning:
-• Check for and handle any missing values in the merged dataset.
-• Convert the ’Date’ column to a DateTime object.
+- Check for and handle any missing values in the merged dataset.
+- Convert the 'Date' column to a DateTime object.
 3. Data Analysis using Slicing and Indexing:
-• Create a new column ’TotalSale’, calculated as ’Quantity’ * ’Price’.
-• Using slicing, create a subset DataFrame containing only transactions from
-the last quarter of the year (October, November, December).
-• Using Boolean indexing, find all transactions for a specific ’Category’ (e.g.,
-’Electronics’).
-• Extract all transactions where the ’TotalSale’ is above the 75th percentile
-of the ’TotalSale’ column using NumPy functions.
+- Create a new column 'TotalSale', calculated as 'Quantity' * 'Price'.
+- Using slicing, create a subset DataFrame containing only transactions from
+  the last quarter of the year (October, November, December).
+- Using Boolean indexing, find all transactions for a specific 'Category' (e.g.,
+  'Electronics').
+- Extract all transactions where the 'TotalSale' is above the 75th percentile
+  of the 'TotalSale' column using NumPy functions.
 4. Advanced Indexing:
-• Using loc and iloc, perform the following:
-– Select all rows for ’ProductID’ 101 and columns ’ProductName’ and
-’TotalSale’.
-– Select every 10th row from the merged dataset and only the columns
-’Date’ and ’Category’.
+- Using loc and iloc, perform the following:
+  - Select all rows for 'ProductID' 101 and columns 'ProductName' and
+    'TotalSale'.
+  - Select every 10th row from the merged dataset and only the columns
+    'Date' and 'Category'.
 5. Grouping and Aggregation:
-• Group the data by ’Category’ and calculate the total and average ’TotalSale’
-for each category.
+- Group the data by 'Category' and calculate the total and average 'TotalSale'
+  for each category.
 6. Time-Series Analysis:
-• Resample the data on a monthly basis and calculate the total ’Quantity’
-sold per month.
-Page 2
+- Resample the data on a monthly basis and calculate the total 'Quantity'
+  sold per month.
 Final Deliverables:
-• Provide the code for each step.
-• Include comments explaining your approach.
-• Display the first 5 rows of the DataFrame after each major step.
+- Provide the code for each step.
+- Include comments explaining your approach.
+- Display the first 5 rows of the DataFrame after each major step.
 """
-P2Code = r"""
+P2Code = """
 import numpy as np
-S = {5, 20, 100, 500, 2000, 50000}
-T = np.array([np.average(np.random.normal(10,5,N)) for N in S])
-np.save('.\\HW3Output.npy',T)
-print(T)
+import pandas as pd
+print("Task 1 - Data Loading and Merging")
+SalesData = pd.read_csv(r".\gwu\SEAS 6414\sales_data.csv")
+Product = pd.read_csv(r".\gwu\SEAS 6414\product_info.csv")
+# I checked the row counts and there are no product ids in the Sales Data
+# that have product keys that are not in Product data. So, an inner join
+# will work for this data.
+SalesProductData = pd.merge(SalesData, Product, on="ProductID", how="inner")
+print("The merged SalesProductData data frame.")
+print(SalesProductData)
+print("")
+print("Task 2 - Data Cleaning")
+# Counting the NAs across the dimensions showsthat there is no missing data. I also ran
+# dropna and saw that the result had the same shape as the input. So, I am confident that
+# there is no missing data. Which worries me. Why would you ask us to address missing data
+# if there was none.
+print(f"The merged dataframe has {SalesProductData.isnull().sum().sum()} missing values.")
+print("")
+print("The SalesProductData types before converting to a datetime:")
+print(SalesProductData.dtypes)
+SalesProductData['Date'] = [pd.to_datetime(aDate) for aDate in SalesProductData.Date]
+print("")
+print("The SalesProductData types after converting to a datetime:")
+print(SalesProductData.dtypes)
+print("")
+print("Task 3 - Data Analysis using Slicing and Indexing")
+SalesProductData['TotalSale'] = SalesProductData['Quantity'] * SalesProductData['Price']
+SalesProductData4Q = SalesProductData.set_index('Date').sort_values(by=['Date'])['2023-10-01' : '2023-12-31']
+print("")
+print("Sales records for the fourth quarter:")
+print(SalesProductData4Q)
+mask = SalesProductData['Category'] == 'Electronics'
+SalesProductElectronics = SalesProductData[mask]
+print("")
+print("Sales records for Electronics:")
+print(SalesProductElectronics)
+# First create and index of all records that have a TotalSale value greater than the 75th percentile
+SalesProductOver75Index = np.where(SalesProductData['TotalSale']>np.percentile(SalesProductData['TotalSale'],75))
+# Next select thos values.
+SalesProductOver75 = SalesProductData.loc[SalesProductOver75Index]
+print("")
+print("Sales records for total price over the 75th percentile:")
+print(SalesProductOver75)
+print("")
+print("Task 4 - Advanced Indexing")
+SalesProductDataPID = SalesProductData.set_index('ProductID')
+SalesProductData101 = SalesProductDataPID.loc[101,['ProductName','TotalSale']]
+print("")
+print("Sales records for product 101 with Product Name and Total Sale:")
+print(SalesProductData101)
+SalesProductDataEvery10th = SalesProductData.iloc[::10,[2,6]]
+print("")
+print("Sales records for envery 10th row with Date and Category:")
+print(SalesProductDataEvery10th)
+print("")
+print("Task 5 - Advanced Indexing")
+
 """
 DoProblem(P2Text, P2Code)
 
