@@ -88,6 +88,7 @@ P1Code = """
 import pandas as pd
 import numpy as np
 import datetime as dt
+pd.options.display.float_format = '{:,.2f}'.format
 HW4F1 = pd.read_csv(r".\gwu\SEAS 6414\homework4_file1.csv")
 # Make the time column a Pandas time rather than a string
 HW4F1['time'] = [pd.Timestamp(ts) for ts in HW4F1.time]
@@ -167,6 +168,7 @@ Final Deliverables:
 P2Code = """
 import numpy as np
 import pandas as pd
+pd.options.display.float_format = '{:,.2f}'.format
 print("Task 1 - Data Loading and Merging")
 SalesData = pd.read_csv(r".\gwu\SEAS 6414\sales_data.csv")
 Product = pd.read_csv(r".\gwu\SEAS 6414\product_info.csv")
@@ -218,11 +220,27 @@ print("Sales records for product 101 with Product Name and Total Sale:")
 print(SalesProductData101)
 SalesProductDataEvery10th = SalesProductData.iloc[::10,[2,6]]
 print("")
-print("Sales records for envery 10th row with Date and Category:")
+print("Sales records for every 10th row with Date and Category:")
 print(SalesProductDataEvery10th)
 print("")
-print("Task 5 - Advanced Indexing")
-
+print("Task 5 - Grouping and Aggregation")
+SalesProductDataCatGrp = SalesProductData.groupby("Category").agg(
+    total_sale=("TotalSale", "sum")
+    , average_sale=("TotalSale", "mean")
+)
+print("")
+print("Sales records grouped by category with toal and average sales by category:")
+print(SalesProductDataCatGrp)
+print("")
+print("Task 6 - Time-Series Analysis")
+# Get down to just the columns needed. I tried to combine this with the indexing but
+# none of my incantations would work.
+SalesProductDataSmall = SalesProductData.loc[:,['Date','Quantity']]
+# To resample, we need the date to be the index
+SalesProductDataDate = SalesProductDataSmall.set_index('Date')
+# Now we can resample down to Month End and calculate the average
+SalesProductDataMonth = SalesProductDataDate.resample('ME').mean()
+print(SalesProductDataMonth)
 """
 DoProblem(P2Text, P2Code)
 
