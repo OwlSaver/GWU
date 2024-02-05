@@ -13,6 +13,12 @@ def DoProblem(ProblemDescription, ProblemCode):
     print("")
     exec(ProblemCode)
 
+#######################################################################################
+#
+# Example running this file:
+# C:\Users\Micha\github>py ".\GWU\SEAS 6414\SEAS6414_HW4_Wacey.py" >".\GWU\SEAS 6414\SEAS6414_HW4_Wacey.txt"
+#
+#######################################################################################
 P1Text = """
 #######################################################################################
 # Problem 1
