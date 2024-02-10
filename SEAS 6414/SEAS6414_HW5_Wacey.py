@@ -1,23 +1,3 @@
-"""
-
-
-
-
-
-
-
-
-
-10. Neighborhood and Regional Analysis
-• Group the properties by regionidneighborhood and plot a horizontal bar chart
-showing the top 10 neighborhoods with the highest average taxvaluedollarcnt.
-• Using regionidzip, create a pie chart to display the proportion of total taxamount
-contributed by the top 5 zip codes. Include a separate ‘other‘ slice for the remaining
-zip codes.
-
-
-
-"""
 #######################################################################################
 # This file has the problem statement and code solution for each problem. They are
 # stored in Python multi line strings. The function DoProblem prints the problem
@@ -27,20 +7,25 @@ zip codes.
 #######################################################################################
 def DoProblem(ProblemNumber, ProblemName, ProblemDescription, ProblemCode):
     RunList = [0,1,2,3,4,5,6,7,8,9,10]
-    RunList = [0,8,9,10]
+    #RunList = [0,5]
     if ProblemNumber in RunList:
       if ProblemNumber != "" and ProblemName != "":
         print("#######################################################################################")
         print(f"# Problem {ProblemNumber} - {ProblemName}")
         print("#######################################################################################")
+        print("")
+        print("Problem:")
+        print("")
       if ProblemDescription != "":
         print(ProblemDescription)
+        print("")
       if ProblemCode != "":
         print("Code:")
         print(ProblemCode)
         print("Execution:")
         print("")
         exec(ProblemCode)
+        print("")
 
 #######################################################################################
 #
@@ -63,8 +48,6 @@ DoProblem(PNumber, PName, PText, PCode)
 PNumber = 1
 PName = "Data Cleaning and Exploration"
 PText = f"""
-Problem:
-
 - Load the zillow feature sample.csv dataset using Pandas and report any missing values
   per column. Create a strategy to handle these missing values, justifying your approach.
 - Generate a summary table that shows the mean, median, and standard deviation of
@@ -120,8 +103,6 @@ DoProblem(PNumber, PName, PText, PCode)
 PNumber = 2
 PName = "Feature Engineering"
 PText = f"""
-Problem:
-
 - Create a new feature Age that represents the age of each property from the yearbuilt
   column, considering the dataset's latest assessmentyear.
 - Develop a binary feature HasPool based on the poolcnt column, where 1 indicates
@@ -154,7 +135,7 @@ print(f"The medan age of the properties based on Year Built and latest assement 
 print("")
 x = ZillowFeatureSample['HasPool'].value_counts().plot(kind='bar')
 x.set_yscale('log')
-plt.title("Houses with and without pools")
+plt.title(f"Problem {PNumber} A:Houses with and without pools")
 plt.show()
 """
 DoProblem(PNumber, PName, PText, PCode)
@@ -162,8 +143,6 @@ DoProblem(PNumber, PName, PText, PCode)
 PNumber = 3
 PName = "Correlation Analysis"
 PText = f"""
-Problem:
-
 - Using NumPy, calculate the Pearson correlation coefficient between bedroomcnt
   and bathroomcnt. Visualize the correlation matrix of the numerical features of the
   dataset using a heatmap in matplotlib.
@@ -183,7 +162,7 @@ ZillowFeatureSample = pd.read_csv("./gwu/SEAS 6414/zillow_feature_sample(1).csv"
 ZillowFeatureSampleSmall = ZillowFeatureSample.loc[:,['bedroomcnt','bathroomcnt']]
 print(ZillowFeatureSampleSmall.corr(numeric_only=True))
 plt.imshow(ZillowFeatureSampleSmall.corr(numeric_only=True), cmap='hot', interpolation='nearest')
-plt.title("Correlation of Bedrooms and Bathrooms")
+plt.title(f"Problem {PNumber} A: Correlation of Bedrooms and Bathrooms")
 plt.show()
 """
 DoProblem(PNumber, PName, PText, PCode)
@@ -192,8 +171,6 @@ DoProblem(PNumber, PName, PText, PCode)
 PNumber = 4
 PName = "Geospatial Analysis"
 PText = f"""
-Problem:
-
 - Plot a scatter plot of latitude and longitude to visualize the geographical distribution
   of properties. Overlay this plot with a density estimate to highlight property
   clusters.
@@ -219,6 +196,7 @@ ZillowFeatureSampleSmall = ZillowFeatureSample.loc[:,['longitude','latitude']].d
 z = gaussian_kde(ZillowFeatureSampleSmall["longitude"])(ZillowFeatureSampleSmall["latitude"])
 fig, ax = plt.subplots()
 ax.scatter(ZillowFeatureSampleSmall["longitude"], ZillowFeatureSampleSmall["latitude"], c=z, s=100)
+plt.title(f"Problem {PNumber} A: Scatter Plot")
 plt.show()
 """
 DoProblem(PNumber, PName, PText, PCode)
@@ -226,8 +204,6 @@ DoProblem(PNumber, PName, PText, PCode)
 PNumber = 5
 PName = "Market Value Analysis"
 PText = f"""
-Problem:
-
 - Visualize the trend of average taxvaluedollarcnt over the years using a line chart.
   Add a shaded area representing the 95% confidence interval for the average values.
 - Create a boxplot to compare the distribution of taxvaluedollarcnt across different
@@ -247,12 +223,18 @@ ZillowFeatureSample = pd.read_csv("./gwu/SEAS 6414/zillow_feature_sample(1).csv"
 ZillowFeatureSample['assessyear'] = ["0000" if ay != ay else str(int(ay)) for ay in ZillowFeatureSample.assessmentyear]
 ZillowFeatureSampleSummary = ZillowFeatureSample.groupby("assessyear").agg(
    taxvaluedollarcnt_mean=("taxvaluedollarcnt", "mean")
+   , taxvaluedollarcnt_std=("taxvaluedollarcnt", "std")
 ).dropna()
-print(ZillowFeatureSampleSummary)
-ax = ZillowFeatureSampleSummary.plot.line()
+
+ZillowFeatureSampleSummary['plus95'] = ZillowFeatureSampleSummary.apply(lambda row: row.taxvaluedollarcnt_mean + (2 * row.taxvaluedollarcnt_std), axis=1)
+ZillowFeatureSampleSummary['minus95'] = ZillowFeatureSampleSummary.apply(lambda row: row.taxvaluedollarcnt_mean - (2 * row.taxvaluedollarcnt_std), axis=1)
+plt.plot(ZillowFeatureSampleSummary.index, ZillowFeatureSampleSummary["taxvaluedollarcnt_mean"], label="Average")
+plt.fill_between(ZillowFeatureSampleSummary.index, ZillowFeatureSampleSummary["plus95"], ZillowFeatureSampleSummary["minus95"], alpha=0.2, label="Confidence Interval")
+plt.title(f"Problem {PNumber} A: Average with Confidence Interval")
 plt.show()
 
 ax = ZillowFeatureSample.boxplot(column="taxvaluedollarcnt", by="buildingqualitytypeid")
+plt.title(f"Problem {PNumber} B: Box Plot")
 plt.show()
 """
 DoProblem(PNumber, PName, PText, PCode)
@@ -260,8 +242,6 @@ DoProblem(PNumber, PName, PText, PCode)
 PNumber = 6
 PName = "Tax Analysis"
 PText = f"""
-Problem:
-
 - Analyze the relationship between taxamount and taxvaluedollarcnt using a scatter plot
   and fit a linear regression line to it. Calculate the R-squared value for this
   fit.
@@ -290,6 +270,7 @@ fig, ax = plt.subplots()
 ax.text(1, 150000, f"$R^2$ = {rsquare}", bbox=dict(facecolor='red', alpha=0.5))
 ZillowFeatureSampleSmall.plot.scatter(x = 'taxvaluedollarcnt', y = 'taxamount', ax = ax)
 ZillowFeatureSampleSmall.plot.line(x = 'taxvaluedollarcnt', y = 'predicted', color = 'red', ax = ax)
+plt.title(f"Problem {PNumber} A: Linear Regression")
 plt.show()
 """
 DoProblem(PNumber, PName, PText, PCode)
@@ -297,8 +278,6 @@ DoProblem(PNumber, PName, PText, PCode)
 PNumber = 7
 PName = "Comparative Analysis"
 PText = f"""
-Problem:
-
 - For properties with numberofstories more than 1, compare the average
   calculatedfinishedsquarefeet against those with only 1 story using a bar chart.
 - Compare the taxvaluedollarcnt for properties with and without a fireplace (fireplaceflag)
@@ -323,10 +302,11 @@ ZillowFeatureSampleSG = ZillowFeatureSample.groupby("storygroup").agg(
 ).dropna()
 
 x = ZillowFeatureSampleSG.plot.bar()
-plt.title("Houses average square feet for one or multi stories")
+plt.title(f"Problem {PNumber} A: Houses average square feet for one or multi stories")
 plt.show()
 
 sb.violinplot(x = 'fpgroup', y = "taxvaluedollarcnt", data = ZillowFeatureSample, inner="stick")
+plt.title(f"Problem {PNumber} B: Fireplace Comparison")
 plt.show()
 """
 DoProblem(PNumber, PName, PText, PCode)
@@ -334,8 +314,6 @@ DoProblem(PNumber, PName, PText, PCode)
 PNumber = 8
 PName = "Time-Series Forecasting (Advanced)"
 PText = f"""
-Problem:
-
 - Group the data by yearbuilt and calculate the annual mean of landtaxvaluedollarcnt.
   Using this time series data, create a forecast plot for the next 10 years with a rolling
   mean and standard deviation.
@@ -359,14 +337,9 @@ ZillowFeatureSampleYB = ZillowFeatureSampleYB.groupby("yearbuilt").agg(
    landtaxvaluedollarcnt_mean=("landtaxvaluedollarcnt", "mean")
 ).dropna()
 
-#ax = ZillowFeatureSampleYB.plot.line()
-#plt.title("Mean Land Tax Value by Year")
-#plt.show()
-
 print("I searched the web and found several articles about ARIMA / SARIMA as a way to train")
 print("Models for prediction. I was not sure that this was the path to take. So, instead")
 print("just used regression on a ten year window and predicted the next year from that.")
-
 
 ZillowFeatureSampleSmall = ZillowFeatureSample.loc[:,['landtaxvaluedollarcnt','yearbuilt']].dropna()
 X = np.array(ZillowFeatureSampleSmall["yearbuilt"]).reshape(-1, 1)
@@ -377,94 +350,54 @@ ZillowFeatureSampleSmall['predicted'] = reg.predict(X)
 future_years = np.array(range(2015, 2024))
 predicted_prices = np.array(reg.predict(future_years.reshape(-1, 1)))
 predicted_data = pd.DataFrame({'yearbuilt': future_years, 'landtaxvaluedollarcnt':predicted_prices}).set_index('yearbuilt')
-print(predicted_data)
-print(ZillowFeatureSampleYB)
 plt.plot(ZillowFeatureSampleYB, color = "black", label = "History")
 plt.plot(predicted_data, color = "red", label = "Prediction")
 plt.ylabel('House Price')
 plt.xlabel('Year Built')
 plt.legend()
+plt.title(f"Problem {PNumber} A: Prediction")
 plt.show()
 
-ZillowFeatureSampleSet = ZillowFeatureSample.loc[:,['landtaxvaluedollarcnt','yearbuilt']].dropna()
-ZillowFeatureSampleSet['yearasdate'] = [pd.to_datetime(yb, format = '%Y') for yb in ZillowFeatureSampleSet.yearbuilt]
-ZillowFeatureSampleSet = ZillowFeatureSampleSet.set_index('yearasdate')
-ZillowFeatureSampleSet = ZillowFeatureSampleSet.sort_index(axis=0)
+print("OK, that did not work well. So, back to the drawing board. Below is another attempt that I think does")
+print("what you asked.")
 
-print("ZillowFeatureSampleSet")
-print(ZillowFeatureSampleSet)
-
-# Define window size for the rolling window - timedelta does not support years.
-window_size = pd.Timedelta("3650 days")
-
+# Define window size for the rolling window
+window_size = 10
 # Calculate rolling mean
-ZillowFeatureSampleSet["rolling_mean"] = ZillowFeatureSampleSet["landtaxvaluedollarcnt"].rolling(window=window_size).mean()
-
+ZillowFeatureSampleYB["rolling_mean"] = ZillowFeatureSampleYB["landtaxvaluedollarcnt_mean"].rolling(window=window_size).mean()
 # Calculate rolling standard deviation
-ZillowFeatureSampleSet["rolling_std"] = ZillowFeatureSampleSet["landtaxvaluedollarcnt"].rolling(window=window_size).std()
-
+ZillowFeatureSampleYB["rolling_std"] = ZillowFeatureSampleYB["landtaxvaluedollarcnt_mean"].rolling(window=window_size).std()
 # Extend index for 10 years
-#future_dates = pd.date_range(start=ZillowFeatureSampleSet.index[-1] + pd.DateOffset(years=1), periods=10)
 future_years = np.array(range(2015, 2024))
-
 # Extend the existing data with NaNs for future dates
-ZillowFeatureSampleSmall_extended = pd.concat([ZillowFeatureSampleSmall,pd.DataFrame(index=future_years)])
-
+ZillowFeatureSampleYB_extended = pd.concat([ZillowFeatureSampleYB,pd.DataFrame(index=future_years)])
 # Fill NaN values with the last rolling mean
-ZillowFeatureSampleSmall_extended["rolling_mean"] = ZillowFeatureSampleSmall_extended["rolling_mean"].fillna(method="ffill")
-
+ZillowFeatureSampleYB_extended["rolling_mean"] = ZillowFeatureSampleYB_extended["rolling_mean"].fillna(method="ffill")
 # Calculate the upper and lower bounds based on rolling mean and standard deviation
-ZillowFeatureSampleSmall_extended["upper_bound"] = ZillowFeatureSampleSmall_extended["rolling_mean"] + 2 * ZillowFeatureSampleSmall_extended["rolling_std"]
-ZillowFeatureSampleSmall_extended["lower_bound"] = ZillowFeatureSampleSmall_extended["rolling_mean"] - 2 * ZillowFeatureSampleSmall_extended["rolling_std"]
-print("Predictions")
-print(ZillowFeatureSampleSmall_extended)
-
+ZillowFeatureSampleYB_extended["upper_bound"] = ZillowFeatureSampleYB_extended["rolling_mean"] + 2 * ZillowFeatureSampleYB_extended["rolling_std"]
+ZillowFeatureSampleYB_extended["lower_bound"] = ZillowFeatureSampleYB_extended["rolling_mean"] - 2 * ZillowFeatureSampleYB_extended["rolling_std"]
 # Plot observed data, rolling mean, and bounds
 plt.figure(figsize=(12, 6))
-plt.plot(ZillowFeatureSampleSmall.index, ZillowFeatureSampleSmall["landtaxvaluedollarcnt"], label="Observed")
-plt.plot(ZillowFeatureSampleSmall_extended.index, ZillowFeatureSampleSmall_extended["rolling_mean"], label="Rolling Mean")
-plt.fill_between(ZillowFeatureSampleSmall_extended.index, ZillowFeatureSampleSmall_extended["upper_bound"], ZillowFeatureSampleSmall_extended["lower_bound"], alpha=0.2, label="Confidence Interval")
-
+plt.plot(ZillowFeatureSampleYB.index, ZillowFeatureSampleYB["landtaxvaluedollarcnt_mean"], label="Observed")
+plt.plot(ZillowFeatureSampleYB_extended.index, ZillowFeatureSampleYB_extended["rolling_mean"], label="Rolling Mean")
+plt.fill_between(ZillowFeatureSampleYB_extended.index, ZillowFeatureSampleYB_extended["upper_bound"], ZillowFeatureSampleYB_extended["lower_bound"], alpha=0.2, label="Confidence Interval")
 # Add labels and title
-plt.xlabel("Time")
-plt.ylabel("Target Value")
-plt.title("Forecast with Rolling Mean and Standard Deviation")
-
+plt.xlabel("Year")
+plt.ylabel("Land Tax Value")
+plt.title(f"Problem {PNumber} B: Forecast with Rolling Mean and Standard Deviation")
 # Rotate x-axis labels for better readability
 plt.xticks(rotation=45)
-
 # Show the plot
 plt.legend()
 plt.grid()
 plt.tight_layout()
 plt.show()
-
-#ZillowFeatureSampleYB['rolling_mean_10'] = ZillowFeatureSampleYB['landtaxvaluedollarcnt'].rolling(10).mean()
-#ZillowFeatureSampleYB['rolling_std_10'] = ZillowFeatureSampleYB['landtaxvaluedollarcnt'].rolling(10).std()
-
-#ZillowFeatureSampleSmall = ZillowFeatureSample.loc[:,['taxamount','taxvaluedollarcnt']].dropna()
-#X = np.array(ZillowFeatureSampleYB["yearbuilt"]).reshape(-1, 1)
-#y = np.array(ZillowFeatureSampleYB["landtaxvaluedollarcnt"])
-# fit the model
-#reg = LinearRegression().fit(X, y)
-#ZillowFeatureSampleYB['predicted'] = reg.predict(X)
-#rsquare = reg.score(X, y)
-
-#x = ZillowFeatureSampleSG.plot.bar()
-#plt.title("Houses average square feet for one or multi stories")
-#plt.show()
-
-#sb.violinplot(x = 'fpgroup', y = "taxvaluedollarcnt", data = ZillowFeatureSample, inner="stick")
-#plt.show()
 """
 DoProblem(PNumber, PName, PText, PCode)
-
 
 PNumber = 9
 PName = "Amenities Impact Analysis"
 PText = f"""
-Problem:
-
 - Determine how the presence of a hot tub or spa (hashottuborspa) and air conditioning (airconditioningtypeid)
   impacts the taxvaluedollarcnt. Use a grouped bar chart to represent the average taxvaluedollarcnt for
   properties with and without these amenities.
@@ -476,23 +409,115 @@ PCode = """
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
+import scipy.stats as stats
+import seaborn as sns
 
 pd.options.display.float_format = '{:,.2f}'.format
 pd.set_option('display.max_columns', None)
 pd.set_option('display.width', 4000)
 
-print("")
 ZillowFeatureSample = pd.read_csv("./gwu/SEAS 6414/zillow_feature_sample(1).csv")
-ZillowFeatureSample['HasHTS'] = ["None" if hhts != hhts else "Has" for hhts in ZillowFeatureSample.hashottuborspa]
-ZillowFeatureSample['HasAC'] = ["None" if act != act or act == 5.0 else "Has" for act in ZillowFeatureSample.airconditioningtypeid]
-#print(ZillowFeatureSample[['hashottuborspa','airconditioningtypeid', 'HasHTS','HasAC']].drop_duplicates())
+ZillowFeatureSample['HasHTS'] = ["No Hot Tub" if hhts != hhts else "Hot Tub" for hhts in ZillowFeatureSample.hashottuborspa]
+ZillowFeatureSample['HasAC'] = ["No AC" if act != act or act == 5.0 else "AC" for act in ZillowFeatureSample.airconditioningtypeid]
 
-ZillowFeatureSampleAM = ZillowFeatureSample.groupby("HasHTS").agg(
+ZillowFeatureSampleAM = ZillowFeatureSample.groupby(["HasHTS", "HasAC"]).agg(
    taxvaluedollarcnt_mean=("taxvaluedollarcnt", "mean")
 ).dropna()
 
 x = ZillowFeatureSampleAM.plot.bar()
-plt.title("Houses average square feet for one or multi stories")
+#x.ticklabel_format(style='plain')
+plt.xlabel("Amenities")
+plt.ylabel("Average Tax Value ($)")
+plt.title(f"Problem {PNumber} A: Average Tax Value based on Amenities")
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
+
+ZillowFeatureSampleSF = ZillowFeatureSample.loc[:,['calculatedfinishedsquarefeet','basementsqft']]
+ZillowFeatureSampleSF['HasBasement'] = ["No Basement" if bsf != bsf or bsf <= 0 else "Basement" for bsf in ZillowFeatureSampleSF.basementsqft]
+ZillowFeatureSampleHasB = ZillowFeatureSampleSF.loc[ZillowFeatureSampleSF['HasBasement'] == "Basement"]
+ZillowFeatureSampleHasB = ZillowFeatureSampleHasB.drop(columns=['basementsqft','HasBasement'])
+ZillowFeatureSampleNoB = ZillowFeatureSampleSF.loc[ZillowFeatureSampleSF['HasBasement'] != "Basement"]
+ZillowFeatureSampleNoB = ZillowFeatureSampleNoB.drop(columns=['basementsqft','HasBasement'])
+
+# Define the null hypothesis
+H0 = "Properties with a basement will have more square feet than those without."
+
+# Define the alternative hypothesis
+H1 = "Properties with a basement will have the same or fewer square feet than those without."
+
+# Calculate the test statistic
+t_stat, p_value = stats.ttest_ind(ZillowFeatureSampleHasB, ZillowFeatureSampleNoB,nan_policy='omit')
+
+# Print the results
+print("Test statistic:", t_stat)
+print("p-value:", p_value)
+
+# Conclusion
+if p_value != p_value:
+  print("t Test failed.")
+elif p_value < 0.05:
+  print(f"Reject the null hypothesis of {H0}.")
+else:
+  print(f"Failed to reject the null hypothesis of {H0}.")
+
+ZillowFeatureSampleSFA = ZillowFeatureSampleSF.drop(columns=['HasBasement'])
+sns.displot(ZillowFeatureSampleSFA, kde=True)
+plt.title(f"Problem {PNumber} B: Histogram overlaid with the probability density function")
+plt.show()
+"""
+DoProblem(PNumber, PName, PText, PCode)
+
+PNumber = 10
+PName = "Neighborhood and Regional Analysis"
+PText = f"""
+- Group the properties by regionidneighborhood and plot a horizontal bar chart
+  showing the top 10 neighborhoods with the highest average taxvaluedollarcnt.
+- Using regionidzip, create a pie chart to display the proportion of total taxamount
+  contributed by the top 5 zip codes. Include a separate 'other' slice for the remaining
+  zip codes.
+"""
+PCode = """
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+import scipy.stats as stats
+
+pd.options.display.float_format = '{:,.2f}'.format
+pd.set_option('display.max_columns', None)
+pd.set_option('display.width', 4000)
+
+ZillowFeatureSample = pd.read_csv("./gwu/SEAS 6414/zillow_feature_sample(1).csv")
+
+ZillowFeatureSampleAM = ZillowFeatureSample.groupby(["regionidneighborhood"]).agg(
+   taxvaluedollarcnt_mean=("taxvaluedollarcnt", "mean")
+)
+ZillowFeatureSampleAM = ZillowFeatureSampleAM.sort_values('taxvaluedollarcnt_mean', ascending=False).head(10)
+ZillowFeatureSampleAM.plot.barh()
+plt.ylabel('Neighborhood')
+plt.xlabel('Average Tax Value ($)')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.legend()
+plt.title(f"Problem {PNumber} A: Top 10 Neigborhoods")
+plt.show()
+
+ZillowFeatureSampleZIP = ZillowFeatureSample.groupby(["regionidzip"]).agg(
+   taxamount_sum=("taxamount", "sum")
+)
+ZillowFeatureSampleZipSort = ZillowFeatureSampleZIP.sort_values('taxamount_sum', ascending=False)
+ZillowFeatureSampleZipTop5 = ZillowFeatureSampleZipSort.head(5).copy()
+# We have to recalulate the mean, since we cannot take the mean of the mean - originally I did mean, sum is simpler
+# but this works for mean witht he proper changes and so I am leaving it in the more complicated form.
+ZillowFeatureSampleZipFull = ZillowFeatureSample.join(ZillowFeatureSampleZipTop5,on='regionidzip',how='outer',)
+ZillowFeatureSampleZipFull['zipgroup'] = ZillowFeatureSampleZipFull.apply(lambda row: 'other' if row.taxamount_sum != row.taxamount_sum else row.regionidzip, axis=1)
+ZillowFeatureSampleZipSum = ZillowFeatureSampleZipFull.groupby(["zipgroup"]).agg(
+   taxamount_sum=("taxamount", "sum")
+)
+ZillowFeatureSampleZipSum.plot.pie(y='taxamount_sum',legend=None)
+plt.tight_layout()
+plt.ylabel('Total Tax')
+plt.title(f"Problem {PNumber} B: Top 5 zip codes")
 plt.show()
 
 """
