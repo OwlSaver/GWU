@@ -1,0 +1,47 @@
+A Knowledge Graph Construction Method for Legal Documents
+Conference paper
+First Online: 25 October 2024
+
+A Framework for Analyzing Legal Documents by Leveraging Knowledge Graphs
+Conference paper
+First Online: 28 July 2024
+
+Knowledge Graph-Based Legal Search over German Court Cases
+Conference paper
+First Online: 11 November 2020
+
+A Practical Approach to Leverage Knowledge Graphs for Legal Query
+Conference paper
+First Online: 31 October 2023
+
+Legal Knowledge Graphs (LKG)
+https://www.linkedin.com/pulse/legal-knowledge-graphs-lkg-lexratio/
+
+
+
+Construction of Legal Knowledge Graph Based on Knowledge-Enhanced Large Language Models
+https://www.mdpi.com/2078-2489/15/11/666
+
+Knowledge Graphs on Legal Data (SEC)
+
+https://github.com/AnjaneyaTripathi/knowledge_graph
+
+
+Convert any Corpus of Text into a Graph of Knowledge
+https://github.com/rahulnyk/knowledge_graph
+
+
+the medium article with it
+https://towardsdatascience.com/how-to-convert-any-text-into-a-graph-of-concepts-110844f22a1a
+
+Nyaya Ontology, A Globalized Legal Ontology for Judicial System
+https://github.com/semintelligence/NyOn
+
+software
+General Architecture for Text Engineering (GATE)
+https://en.wikipedia.org/wiki/General_Architecture_for_Text_Engineering
+
+https://gate.ac.uk/gate/plugins/
+
+https://www.engineeringvillage.com/search/expert.url?SEARCHID=bdea09b56b58430db620d9b5a055592f&COUNT=1&usageOrigin=&usageZone=
+((((Knowledge Graphs for Legal) WN ALL)) AND ({ja} WN DT))
