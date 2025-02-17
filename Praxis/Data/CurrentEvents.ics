@@ -1,0 +1,1343 @@
+BEGIN:VCALENDAR
+PRODID:-//github.com/rianjs/ical.net//NONSGML ical.net 4.0//EN
+VERSION:2.0
+X-WR-TIMEZONE:America/New_York
+BEGIN:VTIMEZONE
+TZID:America/New_York
+X-LIC-LOCATION:America/New_York
+BEGIN:STANDARD
+DTSTART:20231105T020000
+RRULE:FREQ=YEARLY;BYDAY=1SU;BYMONTH=11
+TZNAME:EST
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:20240310T020000
+RRULE:FREQ=YEARLY;BYDAY=2SU;BYMONTH=3
+TZNAME:EDT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4346
+DTEND;TZID=America/New_York:20251218T200000
+DTSTAMP;TZID=America/New_York:20250204T091158
+DTSTART;TZID=America/New_York:20251218T190000
+LAST-MODIFIED;TZID=America/New_York:20250204T091158
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Zoning Hearing Board Meeting
+UID:4346
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4310
+DTEND;TZID=America/New_York:20251217T200000
+DTSTAMP;TZID=America/New_York:20241213T153332
+DTSTART;TZID=America/New_York:20251217T190000
+LAST-MODIFIED;TZID=America/New_York:20241213T153332
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Library Board of Trustees
+UID:4310
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4274
+DTEND;TZID=America/New_York:20251216T201500
+DTSTAMP;TZID=America/New_York:20241213T143628
+DTSTART;TZID=America/New_York:20251216T191500
+LAST-MODIFIED;TZID=America/New_York:20241213T143628
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Environmental Advisory Council Meeting
+UID:4274
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4298
+DTEND;TZID=America/New_York:20251216T190000
+DTSTAMP;TZID=America/New_York:20241213T143700
+DTSTART;TZID=America/New_York:20251216T180000
+LAST-MODIFIED;TZID=America/New_York:20241213T143700
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Parks and Recreation Board Meeting
+UID:4298
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4235
+DTEND;TZID=America/New_York:20251215T200000
+DTSTAMP;TZID=America/New_York:20250204T090609
+DTSTART;TZID=America/New_York:20251215T190000
+LAST-MODIFIED;TZID=America/New_York:20250204T090609
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Board of Supervisors Meeting
+UID:4235
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4286
+DTEND;TZID=America/New_York:20251210T200000
+DTSTAMP;TZID=America/New_York:20250203T163254
+DTSTART;TZID=America/New_York:20251210T190000
+LAST-MODIFIED;TZID=America/New_York:20250203T163254
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Historical Commission Meeting
+UID:4286
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4262
+DTEND;TZID=America/New_York:20251209T201500
+DTSTAMP;TZID=America/New_York:20250204T083342
+DTSTART;TZID=America/New_York:20251209T191500
+LAST-MODIFIED;TZID=America/New_York:20250204T083342
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Easttown Municipal Authority Meeting
+UID:4262
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4334
+DTEND;TZID=America/New_York:20251209T191500
+DTSTAMP;TZID=America/New_York:20250204T083409
+DTSTART;TZID=America/New_York:20251209T181500
+LAST-MODIFIED;TZID=America/New_York:20250204T083409
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Stormwater Management Advisory Committee Meeting
+UID:4334
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4250
+DTEND;TZID=America/New_York:20251208T191500
+DTSTAMP;TZID=America/New_York:20250203T162756
+DTSTART;TZID=America/New_York:20251208T181500
+LAST-MODIFIED;TZID=America/New_York:20250203T162756
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Easttown Citizen's Advisory Committee Meeting
+UID:4250
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4322
+DTEND;TZID=America/New_York:20251202T200000
+DTSTAMP;TZID=America/New_York:20250203T162714
+DTSTART;TZID=America/New_York:20251202T190000
+LAST-MODIFIED;TZID=America/New_York:20250203T162714
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Planning Commission Meeting
+UID:4322
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4238
+DTEND;TZID=America/New_York:20251201T200000
+DTSTAMP;TZID=America/New_York:20250204T090918
+DTSTART;TZID=America/New_York:20251201T190000
+LAST-MODIFIED;TZID=America/New_York:20250204T090918
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Board of Supervisors Meeting
+UID:4238
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4345
+DTEND;TZID=America/New_York:20251120T200000
+DTSTAMP;TZID=America/New_York:20250204T091158
+DTSTART;TZID=America/New_York:20251120T190000
+LAST-MODIFIED;TZID=America/New_York:20250204T091158
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Zoning Hearing Board Meeting
+UID:4345
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4309
+DTEND;TZID=America/New_York:20251119T200000
+DTSTAMP;TZID=America/New_York:20241213T153321
+DTSTART;TZID=America/New_York:20251119T190000
+LAST-MODIFIED;TZID=America/New_York:20241213T153321
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Library Board of Trustees
+UID:4309
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4273
+DTEND;TZID=America/New_York:20251118T201500
+DTSTAMP;TZID=America/New_York:20241213T143627
+DTSTART;TZID=America/New_York:20251118T191500
+LAST-MODIFIED;TZID=America/New_York:20241213T143627
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Environmental Advisory Council Meeting
+UID:4273
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4297
+DTEND;TZID=America/New_York:20251118T190000
+DTSTAMP;TZID=America/New_York:20241213T143700
+DTSTART;TZID=America/New_York:20251118T180000
+LAST-MODIFIED;TZID=America/New_York:20241213T143700
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Parks and Recreation Board Meeting
+UID:4297
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4234
+DTEND;TZID=America/New_York:20251117T200000
+DTSTAMP;TZID=America/New_York:20250204T090609
+DTSTART;TZID=America/New_York:20251117T190000
+LAST-MODIFIED;TZID=America/New_York:20250204T090609
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Board of Supervisors Meeting
+UID:4234
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4285
+DTEND;TZID=America/New_York:20251112T200000
+DTSTAMP;TZID=America/New_York:20250203T163254
+DTSTART;TZID=America/New_York:20251112T190000
+LAST-MODIFIED;TZID=America/New_York:20250203T163254
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Historical Commission Meeting
+UID:4285
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4261
+DTEND;TZID=America/New_York:20251111T201500
+DTSTAMP;TZID=America/New_York:20250204T083342
+DTSTART;TZID=America/New_York:20251111T191500
+LAST-MODIFIED;TZID=America/New_York:20250204T083342
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Easttown Municipal Authority Meeting
+UID:4261
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4333
+DTEND;TZID=America/New_York:20251111T191500
+DTSTAMP;TZID=America/New_York:20250204T083409
+DTSTART;TZID=America/New_York:20251111T181500
+LAST-MODIFIED;TZID=America/New_York:20250204T083409
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Stormwater Management Advisory Committee Meeting
+UID:4333
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4249
+DTEND;TZID=America/New_York:20251110T191500
+DTSTAMP;TZID=America/New_York:20250203T162756
+DTSTART;TZID=America/New_York:20251110T181500
+LAST-MODIFIED;TZID=America/New_York:20250203T162756
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Easttown Citizen's Advisory Committee Meeting
+UID:4249
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4321
+DTEND;TZID=America/New_York:20251106T200000
+DTSTAMP;TZID=America/New_York:20241213T153112
+DTSTART;TZID=America/New_York:20251106T190000
+LAST-MODIFIED;TZID=America/New_York:20241213T153112
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Planning Commission Meeting
+UID:4321
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4237
+DTEND;TZID=America/New_York:20251103T200000
+DTSTAMP;TZID=America/New_York:20250204T090859
+DTSTART;TZID=America/New_York:20251103T190000
+LAST-MODIFIED;TZID=America/New_York:20250204T090859
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Board of Supervisors Meeting
+UID:4237
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4308
+DTEND;TZID=America/New_York:20251022T200000
+DTSTAMP;TZID=America/New_York:20241213T143736
+DTSTART;TZID=America/New_York:20251022T190000
+LAST-MODIFIED;TZID=America/New_York:20241213T143736
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Library Board of Trustees
+UID:4308
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4272
+DTEND;TZID=America/New_York:20251021T201500
+DTSTAMP;TZID=America/New_York:20241213T143627
+DTSTART;TZID=America/New_York:20251021T191500
+LAST-MODIFIED;TZID=America/New_York:20241213T143627
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Environmental Advisory Council Meeting
+UID:4272
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4296
+DTEND;TZID=America/New_York:20251021T190000
+DTSTAMP;TZID=America/New_York:20241213T143700
+DTSTART;TZID=America/New_York:20251021T180000
+LAST-MODIFIED;TZID=America/New_York:20241213T143700
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Parks and Recreation Board Meeting
+UID:4296
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4233
+DTEND;TZID=America/New_York:20251020T200000
+DTSTAMP;TZID=America/New_York:20250204T090609
+DTSTART;TZID=America/New_York:20251020T190000
+LAST-MODIFIED;TZID=America/New_York:20250204T090609
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Board of Supervisors Meeting
+UID:4233
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4344
+DTEND;TZID=America/New_York:20251016T200000
+DTSTAMP;TZID=America/New_York:20250204T091158
+DTSTART;TZID=America/New_York:20251016T190000
+LAST-MODIFIED;TZID=America/New_York:20250204T091158
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Zoning Hearing Board Meeting
+UID:4344
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4260
+DTEND;TZID=America/New_York:20251014T201500
+DTSTAMP;TZID=America/New_York:20250204T083342
+DTSTART;TZID=America/New_York:20251014T191500
+LAST-MODIFIED;TZID=America/New_York:20250204T083342
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Easttown Municipal Authority Meeting
+UID:4260
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4332
+DTEND;TZID=America/New_York:20251014T191500
+DTSTAMP;TZID=America/New_York:20250204T083409
+DTSTART;TZID=America/New_York:20251014T181500
+LAST-MODIFIED;TZID=America/New_York:20250204T083409
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Stormwater Management Advisory Committee Meeting
+UID:4332
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4248
+DTEND;TZID=America/New_York:20251013T191500
+DTSTAMP;TZID=America/New_York:20250203T162756
+DTSTART;TZID=America/New_York:20251013T181500
+LAST-MODIFIED;TZID=America/New_York:20250203T162756
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Easttown Citizen's Advisory Committee Meeting
+UID:4248
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4284
+DTEND;TZID=America/New_York:20251008T200000
+DTSTAMP;TZID=America/New_York:20250203T163254
+DTSTART;TZID=America/New_York:20251008T190000
+LAST-MODIFIED;TZID=America/New_York:20250203T163254
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Historical Commission Meeting
+UID:4284
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4320
+DTEND;TZID=America/New_York:20251007T200000
+DTSTAMP;TZID=America/New_York:20250203T162714
+DTSTART;TZID=America/New_York:20251007T190000
+LAST-MODIFIED;TZID=America/New_York:20250203T162714
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Planning Commission Meeting
+UID:4320
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4236
+DTEND;TZID=America/New_York:20251006T200000
+DTSTAMP;TZID=America/New_York:20250204T090817
+DTSTART;TZID=America/New_York:20251006T190000
+LAST-MODIFIED;TZID=America/New_York:20250204T090817
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Board of Supervisors Meeting
+UID:4236
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4307
+DTEND;TZID=America/New_York:20250924T200000
+DTSTAMP;TZID=America/New_York:20241213T143735
+DTSTART;TZID=America/New_York:20250924T190000
+LAST-MODIFIED;TZID=America/New_York:20241213T143735
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Library Board of Trustees
+UID:4307
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4343
+DTEND;TZID=America/New_York:20250918T200000
+DTSTAMP;TZID=America/New_York:20250204T091158
+DTSTART;TZID=America/New_York:20250918T190000
+LAST-MODIFIED;TZID=America/New_York:20250204T091158
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Zoning Hearing Board Meeting
+UID:4343
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4271
+DTEND;TZID=America/New_York:20250916T201500
+DTSTAMP;TZID=America/New_York:20241213T143627
+DTSTART;TZID=America/New_York:20250916T191500
+LAST-MODIFIED;TZID=America/New_York:20241213T143627
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Environmental Advisory Council Meeting
+UID:4271
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4295
+DTEND;TZID=America/New_York:20250916T190000
+DTSTAMP;TZID=America/New_York:20241213T143659
+DTSTART;TZID=America/New_York:20250916T180000
+LAST-MODIFIED;TZID=America/New_York:20241213T143659
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Parks and Recreation Board Meeting
+UID:4295
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4232
+DTEND;TZID=America/New_York:20250915T200000
+DTSTAMP;TZID=America/New_York:20250204T090609
+DTSTART;TZID=America/New_York:20250915T190000
+LAST-MODIFIED;TZID=America/New_York:20250204T090609
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Board of Supervisors Meeting
+UID:4232
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4283
+DTEND;TZID=America/New_York:20250910T200000
+DTSTAMP;TZID=America/New_York:20250203T163254
+DTSTART;TZID=America/New_York:20250910T190000
+LAST-MODIFIED;TZID=America/New_York:20250203T163254
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Historical Commission Meeting
+UID:4283
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4259
+DTEND;TZID=America/New_York:20250909T201500
+DTSTAMP;TZID=America/New_York:20250204T083342
+DTSTART;TZID=America/New_York:20250909T191500
+LAST-MODIFIED;TZID=America/New_York:20250204T083342
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Easttown Municipal Authority Meeting
+UID:4259
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4331
+DTEND;TZID=America/New_York:20250909T191500
+DTSTAMP;TZID=America/New_York:20250204T083409
+DTSTART;TZID=America/New_York:20250909T181500
+LAST-MODIFIED;TZID=America/New_York:20250204T083409
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Stormwater Management Advisory Committee Meeting
+UID:4331
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4247
+DTEND;TZID=America/New_York:20250908T191500
+DTSTAMP;TZID=America/New_York:20250203T162756
+DTSTART;TZID=America/New_York:20250908T181500
+LAST-MODIFIED;TZID=America/New_York:20250203T162756
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Easttown Citizen's Advisory Committee Meeting
+UID:4247
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4319
+DTEND;TZID=America/New_York:20250902T200000
+DTSTAMP;TZID=America/New_York:20250203T162714
+DTSTART;TZID=America/New_York:20250902T190000
+LAST-MODIFIED;TZID=America/New_York:20250203T162714
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Planning Commission Meeting
+UID:4319
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4306
+DTEND;TZID=America/New_York:20250827T200000
+DTSTAMP;TZID=America/New_York:20241213T143735
+DTSTART;TZID=America/New_York:20250827T190000
+LAST-MODIFIED;TZID=America/New_York:20241213T143735
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Library Board of Trustees
+UID:4306
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4342
+DTEND;TZID=America/New_York:20250821T200000
+DTSTAMP;TZID=America/New_York:20250204T091158
+DTSTART;TZID=America/New_York:20250821T190000
+LAST-MODIFIED;TZID=America/New_York:20250204T091158
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Zoning Hearing Board Meeting
+UID:4342
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4270
+DTEND;TZID=America/New_York:20250819T201500
+DTSTAMP;TZID=America/New_York:20241213T143627
+DTSTART;TZID=America/New_York:20250819T191500
+LAST-MODIFIED;TZID=America/New_York:20241213T143627
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Environmental Advisory Council Meeting
+UID:4270
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4294
+DTEND;TZID=America/New_York:20250819T190000
+DTSTAMP;TZID=America/New_York:20241213T143659
+DTSTART;TZID=America/New_York:20250819T180000
+LAST-MODIFIED;TZID=America/New_York:20241213T143659
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Parks and Recreation Board Meeting
+UID:4294
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4231
+DTEND;TZID=America/New_York:20250818T200000
+DTSTAMP;TZID=America/New_York:20250204T090609
+DTSTART;TZID=America/New_York:20250818T190000
+LAST-MODIFIED;TZID=America/New_York:20250204T090609
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Board of Supervisors Meeting
+UID:4231
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4282
+DTEND;TZID=America/New_York:20250813T200000
+DTSTAMP;TZID=America/New_York:20250203T163254
+DTSTART;TZID=America/New_York:20250813T190000
+LAST-MODIFIED;TZID=America/New_York:20250203T163254
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Historical Commission Meeting
+UID:4282
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4258
+DTEND;TZID=America/New_York:20250812T201500
+DTSTAMP;TZID=America/New_York:20250204T083342
+DTSTART;TZID=America/New_York:20250812T191500
+LAST-MODIFIED;TZID=America/New_York:20250204T083342
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Easttown Municipal Authority Meeting
+UID:4258
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4330
+DTEND;TZID=America/New_York:20250812T191500
+DTSTAMP;TZID=America/New_York:20250204T083409
+DTSTART;TZID=America/New_York:20250812T181500
+LAST-MODIFIED;TZID=America/New_York:20250204T083409
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Stormwater Management Advisory Committee Meeting
+UID:4330
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4246
+DTEND;TZID=America/New_York:20250811T191500
+DTSTAMP;TZID=America/New_York:20250203T162756
+DTSTART;TZID=America/New_York:20250811T181500
+LAST-MODIFIED;TZID=America/New_York:20250203T162756
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Easttown Citizen's Advisory Committee Meeting
+UID:4246
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4318
+DTEND;TZID=America/New_York:20250805T200000
+DTSTAMP;TZID=America/New_York:20250203T162714
+DTSTART;TZID=America/New_York:20250805T190000
+LAST-MODIFIED;TZID=America/New_York:20250203T162714
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Planning Commission Meeting
+UID:4318
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4230
+DTEND;TZID=America/New_York:20250721T200000
+DTSTAMP;TZID=America/New_York:20250204T090609
+DTSTART;TZID=America/New_York:20250721T190000
+LAST-MODIFIED;TZID=America/New_York:20250204T090609
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Board of Supervisors Meeting
+UID:4230
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4341
+DTEND;TZID=America/New_York:20250717T200000
+DTSTAMP;TZID=America/New_York:20250204T091158
+DTSTART;TZID=America/New_York:20250717T190000
+LAST-MODIFIED;TZID=America/New_York:20250204T091158
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Zoning Hearing Board Meeting
+UID:4341
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4269
+DTEND;TZID=America/New_York:20250715T201500
+DTSTAMP;TZID=America/New_York:20241213T143626
+DTSTART;TZID=America/New_York:20250715T191500
+LAST-MODIFIED;TZID=America/New_York:20241213T143626
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Environmental Advisory Council Meeting
+UID:4269
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4293
+DTEND;TZID=America/New_York:20250715T190000
+DTSTAMP;TZID=America/New_York:20241213T143659
+DTSTART;TZID=America/New_York:20250715T180000
+LAST-MODIFIED;TZID=America/New_York:20241213T143659
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Parks and Recreation Board Meeting
+UID:4293
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4245
+DTEND;TZID=America/New_York:20250714T191500
+DTSTAMP;TZID=America/New_York:20250203T162756
+DTSTART;TZID=America/New_York:20250714T181500
+LAST-MODIFIED;TZID=America/New_York:20250203T162756
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Easttown Citizen's Advisory Committee Meeting
+UID:4245
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4281
+DTEND;TZID=America/New_York:20250709T200000
+DTSTAMP;TZID=America/New_York:20250203T163254
+DTSTART;TZID=America/New_York:20250709T190000
+LAST-MODIFIED;TZID=America/New_York:20250203T163254
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Historical Commission Meeting
+UID:4281
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4257
+DTEND;TZID=America/New_York:20250708T201500
+DTSTAMP;TZID=America/New_York:20250204T083342
+DTSTART;TZID=America/New_York:20250708T191500
+LAST-MODIFIED;TZID=America/New_York:20250204T083342
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Easttown Municipal Authority Meeting
+UID:4257
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4329
+DTEND;TZID=America/New_York:20250708T191500
+DTSTAMP;TZID=America/New_York:20250204T083409
+DTSTART;TZID=America/New_York:20250708T181500
+LAST-MODIFIED;TZID=America/New_York:20250204T083409
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Stormwater Management Advisory Committee Meeting
+UID:4329
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4317
+DTEND;TZID=America/New_York:20250701T200000
+DTSTAMP;TZID=America/New_York:20250203T162714
+DTSTART;TZID=America/New_York:20250701T190000
+LAST-MODIFIED;TZID=America/New_York:20250203T162714
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Planning Commission Meeting
+UID:4317
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4304
+DTEND;TZID=America/New_York:20250625T200000
+DTSTAMP;TZID=America/New_York:20241213T143735
+DTSTART;TZID=America/New_York:20250625T190000
+LAST-MODIFIED;TZID=America/New_York:20241213T143735
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Library Board of Trustees
+UID:4304
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4268
+DTEND;TZID=America/New_York:20250617T201500
+DTSTAMP;TZID=America/New_York:20241213T143626
+DTSTART;TZID=America/New_York:20250617T191500
+LAST-MODIFIED;TZID=America/New_York:20241213T143626
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Environmental Advisory Council Meeting
+UID:4268
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4292
+DTEND;TZID=America/New_York:20250617T190000
+DTSTAMP;TZID=America/New_York:20241213T143659
+DTSTART;TZID=America/New_York:20250617T180000
+LAST-MODIFIED;TZID=America/New_York:20241213T143659
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Parks and Recreation Board Meeting
+UID:4292
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4229
+DTEND;TZID=America/New_York:20250616T200000
+DTSTAMP;TZID=America/New_York:20250204T090609
+DTSTART;TZID=America/New_York:20250616T190000
+LAST-MODIFIED;TZID=America/New_York:20250204T090609
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Board of Supervisors Meeting
+UID:4229
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4340
+DTEND;TZID=America/New_York:20250612T200000
+DTSTAMP;TZID=America/New_York:20250204T091132
+DTSTART;TZID=America/New_York:20250612T190000
+LAST-MODIFIED;TZID=America/New_York:20250204T091132
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Zoning Hearing Board Meeting
+UID:4340
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4280
+DTEND;TZID=America/New_York:20250611T200000
+DTSTAMP;TZID=America/New_York:20250203T163254
+DTSTART;TZID=America/New_York:20250611T190000
+LAST-MODIFIED;TZID=America/New_York:20250203T163254
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Historical Commission Meeting
+UID:4280
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4256
+DTEND;TZID=America/New_York:20250610T201500
+DTSTAMP;TZID=America/New_York:20250204T083342
+DTSTART;TZID=America/New_York:20250610T191500
+LAST-MODIFIED;TZID=America/New_York:20250204T083342
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Easttown Municipal Authority Meeting
+UID:4256
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4328
+DTEND;TZID=America/New_York:20250610T191500
+DTSTAMP;TZID=America/New_York:20250204T083409
+DTSTART;TZID=America/New_York:20250610T181500
+LAST-MODIFIED;TZID=America/New_York:20250204T083409
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Stormwater Management Advisory Committee Meeting
+UID:4328
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4244
+DTEND;TZID=America/New_York:20250609T191500
+DTSTAMP;TZID=America/New_York:20250203T162756
+DTSTART;TZID=America/New_York:20250609T181500
+LAST-MODIFIED;TZID=America/New_York:20250203T162756
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Easttown Citizen's Advisory Committee Meeting
+UID:4244
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4316
+DTEND;TZID=America/New_York:20250603T200000
+DTSTAMP;TZID=America/New_York:20250203T162714
+DTSTART;TZID=America/New_York:20250603T190000
+LAST-MODIFIED;TZID=America/New_York:20250203T162714
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Planning Commission Meeting
+UID:4316
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4303
+DTEND;TZID=America/New_York:20250528T200000
+DTSTAMP;TZID=America/New_York:20241213T143734
+DTSTART;TZID=America/New_York:20250528T190000
+LAST-MODIFIED;TZID=America/New_York:20241213T143734
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Library Board of Trustees
+UID:4303
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4267
+DTEND;TZID=America/New_York:20250520T201500
+DTSTAMP;TZID=America/New_York:20241213T143626
+DTSTART;TZID=America/New_York:20250520T191500
+LAST-MODIFIED;TZID=America/New_York:20241213T143626
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Environmental Advisory Council Meeting
+UID:4267
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4291
+DTEND;TZID=America/New_York:20250520T190000
+DTSTAMP;TZID=America/New_York:20241213T143659
+DTSTART;TZID=America/New_York:20250520T180000
+LAST-MODIFIED;TZID=America/New_York:20241213T143659
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Parks and Recreation Board Meeting
+UID:4291
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4228
+DTEND;TZID=America/New_York:20250519T200000
+DTSTAMP;TZID=America/New_York:20250204T090609
+DTSTART;TZID=America/New_York:20250519T190000
+LAST-MODIFIED;TZID=America/New_York:20250204T090609
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Board of Supervisors Meeting
+UID:4228
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4339
+DTEND;TZID=America/New_York:20250515T200000
+DTSTAMP;TZID=America/New_York:20250204T091158
+DTSTART;TZID=America/New_York:20250515T190000
+LAST-MODIFIED;TZID=America/New_York:20250204T091158
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Zoning Hearing Board Meeting
+UID:4339
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4279
+DTEND;TZID=America/New_York:20250514T200000
+DTSTAMP;TZID=America/New_York:20250203T163254
+DTSTART;TZID=America/New_York:20250514T190000
+LAST-MODIFIED;TZID=America/New_York:20250203T163254
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Historical Commission Meeting
+UID:4279
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4255
+DTEND;TZID=America/New_York:20250513T201500
+DTSTAMP;TZID=America/New_York:20250204T083342
+DTSTART;TZID=America/New_York:20250513T191500
+LAST-MODIFIED;TZID=America/New_York:20250204T083342
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Easttown Municipal Authority Meeting
+UID:4255
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4327
+DTEND;TZID=America/New_York:20250513T191500
+DTSTAMP;TZID=America/New_York:20250204T083409
+DTSTART;TZID=America/New_York:20250513T181500
+LAST-MODIFIED;TZID=America/New_York:20250204T083409
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Stormwater Management Advisory Committee Meeting
+UID:4327
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4243
+DTEND;TZID=America/New_York:20250512T191500
+DTSTAMP;TZID=America/New_York:20250203T162756
+DTSTART;TZID=America/New_York:20250512T181500
+LAST-MODIFIED;TZID=America/New_York:20250203T162756
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Easttown Citizen's Advisory Committee Meeting
+UID:4243
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4315
+DTEND;TZID=America/New_York:20250506T200000
+DTSTAMP;TZID=America/New_York:20250203T162714
+DTSTART;TZID=America/New_York:20250506T190000
+LAST-MODIFIED;TZID=America/New_York:20250203T162714
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Planning Commission Meeting
+UID:4315
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4302
+DTEND;TZID=America/New_York:20250423T200000
+DTSTAMP;TZID=America/New_York:20241213T143734
+DTSTART;TZID=America/New_York:20250423T190000
+LAST-MODIFIED;TZID=America/New_York:20241213T143734
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Library Board of Trustees
+UID:4302
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4227
+DTEND;TZID=America/New_York:20250421T200000
+DTSTAMP;TZID=America/New_York:20250204T090609
+DTSTART;TZID=America/New_York:20250421T190000
+LAST-MODIFIED;TZID=America/New_York:20250204T090609
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Board of Supervisors Meeting
+UID:4227
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4338
+DTEND;TZID=America/New_York:20250417T200000
+DTSTAMP;TZID=America/New_York:20250204T091158
+DTSTART;TZID=America/New_York:20250417T190000
+LAST-MODIFIED;TZID=America/New_York:20250204T091158
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Zoning Hearing Board Meeting
+UID:4338
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4266
+DTEND;TZID=America/New_York:20250415T201500
+DTSTAMP;TZID=America/New_York:20241213T143626
+DTSTART;TZID=America/New_York:20250415T191500
+LAST-MODIFIED;TZID=America/New_York:20241213T143626
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Environmental Advisory Council Meeting
+UID:4266
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4290
+DTEND;TZID=America/New_York:20250415T190000
+DTSTAMP;TZID=America/New_York:20241213T143658
+DTSTART;TZID=America/New_York:20250415T180000
+LAST-MODIFIED;TZID=America/New_York:20241213T143658
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Parks and Recreation Board Meeting
+UID:4290
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4242
+DTEND;TZID=America/New_York:20250414T191500
+DTSTAMP;TZID=America/New_York:20250203T162756
+DTSTART;TZID=America/New_York:20250414T181500
+LAST-MODIFIED;TZID=America/New_York:20250203T162756
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Easttown Citizen's Advisory Committee Meeting
+UID:4242
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4278
+DTEND;TZID=America/New_York:20250409T200000
+DTSTAMP;TZID=America/New_York:20250203T163254
+DTSTART;TZID=America/New_York:20250409T190000
+LAST-MODIFIED;TZID=America/New_York:20250203T163254
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Historical Commission Meeting
+UID:4278
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4254
+DTEND;TZID=America/New_York:20250408T201500
+DTSTAMP;TZID=America/New_York:20250204T083342
+DTSTART;TZID=America/New_York:20250408T191500
+LAST-MODIFIED;TZID=America/New_York:20250204T083342
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Easttown Municipal Authority Meeting
+UID:4254
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4326
+DTEND;TZID=America/New_York:20250408T191500
+DTSTAMP;TZID=America/New_York:20250204T083409
+DTSTART;TZID=America/New_York:20250408T181500
+LAST-MODIFIED;TZID=America/New_York:20250204T083409
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Stormwater Management Advisory Committee Meeting
+UID:4326
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4314
+DTEND;TZID=America/New_York:20250401T200000
+DTSTAMP;TZID=America/New_York:20250203T162714
+DTSTART;TZID=America/New_York:20250401T190000
+LAST-MODIFIED;TZID=America/New_York:20250203T162714
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Planning Commission Meeting
+UID:4314
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4301
+DTEND;TZID=America/New_York:20250326T200000
+DTSTAMP;TZID=America/New_York:20241213T143734
+DTSTART;TZID=America/New_York:20250326T190000
+LAST-MODIFIED;TZID=America/New_York:20241213T143734
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Library Board of Trustees
+UID:4301
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4337
+DTEND;TZID=America/New_York:20250320T200000
+DTSTAMP;TZID=America/New_York:20250204T091158
+DTSTART;TZID=America/New_York:20250320T190000
+LAST-MODIFIED;TZID=America/New_York:20250204T091158
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Zoning Hearing Board Meeting
+UID:4337
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4265
+DTEND;TZID=America/New_York:20250318T201500
+DTSTAMP;TZID=America/New_York:20241213T143625
+DTSTART;TZID=America/New_York:20250318T191500
+LAST-MODIFIED;TZID=America/New_York:20241213T143625
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Environmental Advisory Council Meeting
+UID:4265
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4289
+DTEND;TZID=America/New_York:20250318T190000
+DTSTAMP;TZID=America/New_York:20241213T143658
+DTSTART;TZID=America/New_York:20250318T180000
+LAST-MODIFIED;TZID=America/New_York:20241213T143658
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Parks and Recreation Board Meeting
+UID:4289
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4226
+DTEND;TZID=America/New_York:20250317T200000
+DTSTAMP;TZID=America/New_York:20250204T090609
+DTSTART;TZID=America/New_York:20250317T190000
+LAST-MODIFIED;TZID=America/New_York:20250204T090609
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Board of Supervisors Meeting
+UID:4226
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4277
+DTEND;TZID=America/New_York:20250312T200000
+DTSTAMP;TZID=America/New_York:20250203T163254
+DTSTART;TZID=America/New_York:20250312T190000
+LAST-MODIFIED;TZID=America/New_York:20250203T163254
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Historical Commission Meeting
+UID:4277
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4253
+DTEND;TZID=America/New_York:20250311T201500
+DTSTAMP;TZID=America/New_York:20250204T083342
+DTSTART;TZID=America/New_York:20250311T191500
+LAST-MODIFIED;TZID=America/New_York:20250204T083342
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Easttown Municipal Authority Meeting
+UID:4253
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4325
+DTEND;TZID=America/New_York:20250311T191500
+DTSTAMP;TZID=America/New_York:20250204T083409
+DTSTART;TZID=America/New_York:20250311T181500
+LAST-MODIFIED;TZID=America/New_York:20250204T083409
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Stormwater Management Advisory Committee Meeting
+UID:4325
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4241
+DTEND;TZID=America/New_York:20250310T191500
+DTSTAMP;TZID=America/New_York:20250203T162756
+DTSTART;TZID=America/New_York:20250310T181500
+LAST-MODIFIED;TZID=America/New_York:20250203T162756
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Easttown Citizen's Advisory Committee Meeting
+UID:4241
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4313
+DTEND;TZID=America/New_York:20250304T200000
+DTSTAMP;TZID=America/New_York:20250203T162714
+DTSTART;TZID=America/New_York:20250304T190000
+LAST-MODIFIED;TZID=America/New_York:20250203T162714
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Planning Commission Meeting
+UID:4313
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4300
+DTEND;TZID=America/New_York:20250226T200000
+DTSTAMP;TZID=America/New_York:20241213T143734
+DTSTART;TZID=America/New_York:20250226T190000
+LAST-MODIFIED;TZID=America/New_York:20241213T143734
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Library Board of Trustees
+UID:4300
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4336
+DTEND;TZID=America/New_York:20250220T200000
+DTSTAMP;TZID=America/New_York:20250204T091158
+DTSTART;TZID=America/New_York:20250220T190000
+LAST-MODIFIED;TZID=America/New_York:20250204T091158
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Zoning Hearing Board Meeting
+UID:4336
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4264
+DTEND;TZID=America/New_York:20250219T201500
+DTSTAMP;TZID=America/New_York:20250204T083843
+DTSTART;TZID=America/New_York:20250219T191500
+LAST-MODIFIED;TZID=America/New_York:20250204T083843
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Environmental Advisory Council Meeting
+UID:4264
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4288
+DTEND;TZID=America/New_York:20250219T190000
+DTSTAMP;TZID=America/New_York:20250204T083815
+DTSTART;TZID=America/New_York:20250219T180000
+LAST-MODIFIED;TZID=America/New_York:20250204T083815
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Parks and Recreation Board Meeting
+UID:4288
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4225
+DTEND;TZID=America/New_York:20250218T200000
+DTSTAMP;TZID=America/New_York:20250204T090513
+DTSTART;TZID=America/New_York:20250218T190000
+LAST-MODIFIED;TZID=America/New_York:20250204T090513
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Board of Supervisors Meeting
+UID:4225
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4276
+DTEND;TZID=America/New_York:20250212T200000
+DTSTAMP;TZID=America/New_York:20250203T163254
+DTSTART;TZID=America/New_York:20250212T190000
+LAST-MODIFIED;TZID=America/New_York:20250203T163254
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Historical Commission Meeting
+UID:4276
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4252
+DTEND;TZID=America/New_York:20250211T201500
+DTSTAMP;TZID=America/New_York:20250204T083342
+DTSTART;TZID=America/New_York:20250211T191500
+LAST-MODIFIED;TZID=America/New_York:20250204T083342
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Easttown Municipal Authority Meeting
+UID:4252
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+BEGIN:VEVENT
+DESCRIPTION: https://www.easttown.org/calendar.aspx?EID=4324
+DTEND;TZID=America/New_York:20250211T191500
+DTSTAMP;TZID=America/New_York:20250204T083409
+DTSTART;TZID=America/New_York:20250211T181500
+LAST-MODIFIED;TZID=America/New_York:20250204T083409
+LOCATION: -
+SEQUENCE:0
+SUMMARY:Stormwater Management Advisory Committee Meeting
+UID:4324
+URL:/common/modules/iCalendar/iCalendar.aspx?feed=calendar&catID=23
+END:VEVENT
+END:VCALENDAR
